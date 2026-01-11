@@ -1,0 +1,175 @@
+api: api
+languages:
+  java:
+    sdk_name: apijava
+    ci_cd:
+    - github
+    group_id: com.yourorg
+  python:
+    sdk_name: api_py
+    ci_cd:
+    - github
+    llm_coding_assistants:
+    - claude_code
+    - cursor
+    - gemini
+    - github_copilot
+  typescript:
+    sdk_name: api_ts
+    ci_cd:
+    - github
+    llm_coding_assistants:
+    - claude_code
+    - cursor
+    - gemini
+    - github_copilot
+  rust:
+    sdk_name: api_rs
+    ci_cd:
+    - github
+    cli: false
+  go:
+    sdk_name: api_go
+    ci_cd:
+    - github
+  csharp:
+    sdk_name: ApiCSharp
+    ci_cd:
+    - github
+auths:
+- id: ApiKeyAuth
+  param: api_key
+- id: BearerAuth
+  param: token
+default_module_structure: path
+modules:
+- path: agent.build.workflow
+  operations:
+  - id: agent_build_workflow
+    function_name: create
+  - id: get_agent_build_workflow_output
+    function_name: list
+- path: auth.login
+  operations:
+  - id: POST|/auth/login
+    function_name: create
+- path: auth.refresh
+  operations:
+  - id: POST|/auth/refresh
+    function_name: create
+- path: chats
+  operations:
+  - id: GET|/chats/{id}
+    function_name: get
+  - id: PATCH|/chats/{id}
+    function_name: patch
+  - id: POST|/chats/{id}
+    function_name: create
+- path: feeds
+  operations:
+  - id: GET|/feeds
+    function_name: list
+  - id: GET|/feeds/{id}
+    function_name: get
+  - id: POST|/feeds
+    function_name: create
+- path: feeds.items
+  operations:
+  - id: GET|/feeds/items/{id}
+    function_name: get
+  - id: POST|/feeds/items
+    function_name: create
+- path: feeds.vector.search
+  operations:
+  - id: POST|/feeds/{id}/vector/search
+    function_name: create
+- path: integrations.api
+  operations:
+  - id: DELETE|/integrations/api/{id}
+    function_name: delete
+  - id: GET|/integrations/api/{id}
+    function_name: get
+  - id: POST|/integrations/api
+    function_name: create
+- path: integrations.api.operations
+  operations:
+  - id: DELETE|/integrations/api/{id}/operations/{operationId}
+    function_name: delete
+  - id: GET|/integrations/api/{id}/operations/{operationId}
+    function_name: get
+  - id: PATCH|/integrations/api/{id}/operations/{operationId}
+    function_name: patch
+  - id: POST|/integrations/api/{id}/operations
+    function_name: create
+- path: integrations.api.secrets
+  operations:
+  - id: DELETE|/integrations/api/{id}/secrets/{secretId}
+    function_name: delete
+  - id: GET|/integrations/api/{id}/secrets
+    function_name: list
+  - id: POST|/integrations/api/{id}/secrets
+    function_name: create
+- path: search_groups
+  operations:
+  - id: GET|/search_groups/{id}
+    function_name: get
+  - id: POST|/search_groups
+    function_name: create
+  - id: list_search_groups
+    function_name: list
+- path: search_groups.items
+  operations:
+  - id: GET|/search_groups/items/{id}
+    function_name: get
+  - id: POST|/search_groups/{id}/items
+    function_name: create
+  - id: list_search_items
+    function_name: list
+- path: tools
+  operations:
+  - id: get_tools
+    function_name: list
+- path: tools.code_execution
+  operations:
+  - id: code_execution
+    function_name: create
+- path: tools.dictionary_search
+  operations:
+  - id: dictionary_search
+    function_name: create
+- path: tools.format
+  operations:
+  - id: format
+    function_name: create
+- path: tools.internet_search
+  operations:
+  - id: internet_search
+    function_name: create
+- path: tools.memory_query
+  operations:
+  - id: memory_query
+    function_name: create
+- path: tools.meta_tagger
+  operations:
+  - id: meta_tagger
+    function_name: create
+- path: tools.standard_llm
+  operations:
+  - id: standard_llm
+    function_name: create
+- path: tools.structured_output
+  operations:
+  - id: structured_output
+    function_name: create
+- path: workflow.run.trigger
+  operations:
+  - id: trigger_workflow_run
+    function_name: create
+- path: workflows.dispatch
+  operations:
+  - id: dispatch_workflow
+    function_name: create
+- path: workflows.invoke
+  operations:
+  - id: invoke_workflow
+    function_name: create

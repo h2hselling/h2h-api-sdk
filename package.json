@@ -1,38 +1,43 @@
 {
   "name": "@human2human/sdk",
-  "version": "1.0.0",
-  "description": "Human2Human SDK",
+  "version": "0.1.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "type": "module",
-  "published": "Sat Jan 10 06:35:19 PM EST 2026",
-  "scripts": {
-    "build": "tsup"
-  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
+      "default": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/types/index.js"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/h2hselling/h2h-api-sdk.git"
+  "files": [
+    "dist",
+    "README",
+    "package.json"
+  ],
+  "scripts": {
+    "format": "prettier --write 'src/**/*.ts'",
+    "build": "tsc && tsc-alias",
+    "test": "jest -i --testPathPattern=test",
+    "prepare": "npm run build"
   },
-  "author": "Human2Human",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/h2hselling/h2h-api-sdk/issues"
-  },
-  "homepage": "https://github.com/h2hselling/h2h-api-sdk#readme",
   "dependencies": {
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.2"
+    "make-api-request-js": "^0.2.1"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "17.0.33",
+    "@types/node-fetch": "2.6.9",
+    "@types/qs": "6.9.8",
+    "@types/url-join": "4.0.1",
     "jest": "^29.7.0",
-    "ts-jest": "^29.1.4",
-    "ts-node": "^10.9.2"
+    "@biomejs/biome": "2.2.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
+    "typescript": "^5.2.0"
   }
 }

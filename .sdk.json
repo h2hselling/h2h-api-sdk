@@ -1,0 +1,1297 @@
+{
+  "id": "f0a9c310-f0ed-4c16-8c6b-9af25255152f",
+  "tracked_paths": [
+    {
+      "editable": false,
+      "path": ".cursor/rules/typescript-sdk.mdc"
+    },
+    {
+      "editable": false,
+      "path": ".github/copilot-instructions.md"
+    },
+    {
+      "editable": true,
+      "path": ".github/workflows/publish.yml"
+    },
+    {
+      "editable": true,
+      "path": ".github/workflows/run-tests.yml"
+    },
+    {
+      "editable": true,
+      "path": ".gitignore"
+    },
+    {
+      "editable": false,
+      "path": "CLAUDE.md"
+    },
+    {
+      "editable": false,
+      "path": "GEMINI.md"
+    },
+    {
+      "editable": false,
+      "path": "biome.json"
+    },
+    {
+      "editable": false,
+      "path": "jest.config.json"
+    },
+    {
+      "editable": false,
+      "path": "jest.setup.js"
+    },
+    {
+      "editable": true,
+      "path": "package.json"
+    },
+    {
+      "editable": true,
+      "path": "src/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/client.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/environment.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/build/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/build/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/agent/build/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/build/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/build/workflow/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/build/workflow/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/agent/build/workflow/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/build/workflow/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/agent/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/auth/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/auth/index.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/auth/login/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/auth/login/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/auth/login/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/auth/login/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/auth/refresh/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/auth/refresh/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/auth/refresh/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/auth/refresh/resource-client.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/auth/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/auth/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/chats/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/chats/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/chats/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/chats/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/feeds/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/feeds/index.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/feeds/items/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/feeds/items/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/feeds/items/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/feeds/items/resource-client.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/feeds/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/feeds/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/feeds/vector/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/feeds/vector/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/feeds/vector/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/feeds/vector/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/feeds/vector/search/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/feeds/vector/search/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/feeds/vector/search/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/feeds/vector/search/resource-client.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/index.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/integrations/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/integrations/api/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/integrations/api/index.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/integrations/api/operations/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/integrations/api/operations/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/integrations/api/operations/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/integrations/api/operations/resource-client.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/integrations/api/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/integrations/api/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/integrations/api/secrets/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/integrations/api/secrets/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/integrations/api/secrets/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/integrations/api/secrets/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/integrations/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/integrations/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/integrations/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/search-groups/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/search-groups/index.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/search-groups/items/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/search-groups/items/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/search-groups/items/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/search-groups/items/resource-client.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/search-groups/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/search-groups/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/code-execution/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/code-execution/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/tools/code-execution/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/code-execution/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/dictionary-search/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/dictionary-search/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/tools/dictionary-search/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/dictionary-search/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/format/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/format/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/tools/format/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/format/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/index.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/internet-search/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/internet-search/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/tools/internet-search/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/internet-search/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/memory-query/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/memory-query/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/tools/memory-query/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/memory-query/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/meta-tagger/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/meta-tagger/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/tools/meta-tagger/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/meta-tagger/resource-client.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/tools/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/standard-llm/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/standard-llm/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/tools/standard-llm/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/standard-llm/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/structured-output/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/structured-output/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/tools/structured-output/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/tools/structured-output/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflow/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflow/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/workflow/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflow/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflow/run/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflow/run/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/workflow/run/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflow/run/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflow/run/trigger/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflow/run/trigger/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/workflow/run/trigger/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflow/run/trigger/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflows/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflows/dispatch/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflows/dispatch/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/workflows/dispatch/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflows/dispatch/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflows/index.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflows/invoke/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflows/invoke/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/workflows/invoke/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflows/invoke/resource-client.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/workflows/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflows/resource-client.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content-chat-messages-item-role-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content-chat-messages-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content-chat-status-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content-chat-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content-chat.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content-messages-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content-output-feed-feed-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content-output-feed.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content-output-search-groups-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content-output-workflow-tasks-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content-output-workflow.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content-output.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content-status.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-content.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj0.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj1-content-chat-messages-item-role-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj1-content-chat-messages-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj1-content-chat-status-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj1-content-chat-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj1-content-chat.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj1-content-messages-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj1-content.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj1-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response-response-obj1.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-list-response-chat-messages-item-role-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-list-response-chat-messages-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-list-response-chat-status-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-list-response-chat-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-list-response-chat.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-list-response-messages-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-build-workflow-list-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/auth-login-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/auth-login-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/auth-refresh-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/auth-refresh-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-create-response-messages-item-role-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-create-response-messages-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-create-response-status-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-create-response-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-get-response-messages-item-role-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-get-response-messages-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-get-response-status-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-get-response-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-get-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-patch-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-patch-response-messages-item-role-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-patch-response-messages-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-patch-response-status-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-patch-response-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/chats-patch-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-create-body-config-obj0.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-create-body-config-obj2.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-create-body-feed-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-create-response-feed-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-get-response-feed-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-get-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-items-create-body-options.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-items-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-items-create-response-workflow-runs-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-items-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-items-get-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-list-response-item-feed-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-list-response-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-vector-search-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-vector-search-create-response-item-resource-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/feeds-vector-search-create-response-item.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/types/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-delete-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-get-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-operations-create-body-method-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-operations-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-operations-create-response-method-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-operations-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-operations-delete-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-operations-get-response-method-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-operations-get-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-operations-patch-body-method-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-operations-patch-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-operations-patch-response-method-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-operations-patch-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-secrets-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-secrets-create-response-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-secrets-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-secrets-delete-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-secrets-list-response-item-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/integrations-api-secrets-list-response-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-get-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-items-create-body-obj0.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-items-create-body-obj1.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-items-create-response-union0-obj0.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-items-create-response-union0-obj1.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-items-get-response-value-obj0.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-items-get-response-value-obj1.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-items-get-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-items-list-response-item-value-obj0.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-items-list-response-item-value-obj1.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-items-list-response-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-list-response-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/search-groups-list-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-code-execution-create-body-language-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-code-execution-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-code-execution-create-response-error.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-code-execution-create-response-logs.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-code-execution-create-response-result-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-code-execution-create-response-result.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-code-execution-create-response-results-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-code-execution-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-dictionary-search-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-dictionary-search-create-response-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-format-create-body-format-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-format-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-format-create-response-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-internet-search-create-body-messages-item-role-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-internet-search-create-body-messages-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-internet-search-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-internet-search-create-response-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-list-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-memory-query-create-body-obj0-input.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-memory-query-create-body-obj0-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-memory-query-create-body-obj0.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-memory-query-create-body-obj1-input-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-memory-query-create-body-obj1-input.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-memory-query-create-body-obj1-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-memory-query-create-body-obj1.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-memory-query-create-response-row.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-memory-query-create-response-rows-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-memory-query-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-meta-tagger-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-meta-tagger-create-response-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-standard-llm-create-body-messages-item-role-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-standard-llm-create-body-messages-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-standard-llm-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-standard-llm-create-response-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/tools-structured-output-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflow-run-trigger-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflow-run-trigger-create-response-status-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflow-run-trigger-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-dispatch-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-dispatch-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-invoke-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-invoke-create-response-workflow.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-invoke-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/agent-build-workflow.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/auth-login.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/auth-refresh.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/chats.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/feeds-items.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/feeds-vector-search.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/feeds.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/integrations-api-operations.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/integrations-api-secrets.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/integrations-api.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/search-groups-items.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/search-groups.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/tools-code-execution.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/tools-dictionary-search.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/tools-format.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/tools-internet-search.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/tools-memory-query.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/tools-meta-tagger.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/tools-standard-llm.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/tools-structured-output.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/tools.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/workflow-run-trigger.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/workflows-dispatch.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/workflows-invoke.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "tsconfig.json"
+    }
+  ]
+}

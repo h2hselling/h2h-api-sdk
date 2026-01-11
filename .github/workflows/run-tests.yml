@@ -1,0 +1,41 @@
+# This workflow will test the typescript package against Sideko's Mock Servers
+# Tests will run automatically on a push to `main` or a pull request event
+#
+# MAINTENANCE:
+#   - Workflow triggers `on: ...` can be edited and Sideko will maintain the `jobs: ...`
+#   - Alternatively, if you wish to fully customize the workflow, you can clone this
+#     file (save under a different filepath to avoid clashing) and either disable this workflow
+#     via the triggers or remove `github` from the `ci_cd` options in the SDK config.
+#
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      #----------------------------------------------
+      #  -----  checkout & setup node  -----
+      #----------------------------------------------
+      - name: checkout repository
+        uses: actions/checkout@v4
+      - name: setup node
+        uses: actions/setup-node@v3
+        id: setup-node
+        with:
+          cache: "npm"
+      #---------------------------------------------------------------
+      #  -----  install dependencies -----
+      #---------------------------------------------------------------
+      - name: install dependencies
+        run: npm install
+      #------------------------------
+      #  -----  run tests -----
+      #------------------------------
+      - name: run jest
+        run: npm test
