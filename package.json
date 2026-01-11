@@ -1,0 +1,38 @@
+{
+  "name": "@human2human/sdk",
+  "version": "1.0.0",
+  "description": "Human2Human SDK",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "published": "Sat Jan 10 06:35:19 PM EST 2026",
+  "scripts": {
+    "build": "tsup"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h2hselling/h2h-api-sdk.git"
+  },
+  "author": "Human2Human",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/h2hselling/h2h-api-sdk/issues"
+  },
+  "homepage": "https://github.com/h2hselling/h2h-api-sdk#readme",
+  "dependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.4",
+    "ts-node": "^10.9.2"
+  }
+}
