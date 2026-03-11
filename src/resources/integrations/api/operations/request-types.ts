@@ -31,7 +31,7 @@ export type DeleteRequest = {
  */
 export type External$DeleteRequest = {
   id: string;
-  operationId: string;
+  operation_id: string;
 };
 
 /**
@@ -44,12 +44,12 @@ const SchemaIn$DeleteRequest: z.ZodType<
 > = z
   .object({
     id: z.string(),
-    operationId: z.string(),
+    operation_id: z.string(),
   })
   .transform((obj) => {
     return zodTransform(obj, {
       id: "id",
-      operationId: "operationId",
+      operation_id: "operationId",
     });
   });
 
@@ -69,7 +69,7 @@ const SchemaOut$DeleteRequest: z.ZodType<
   .transform((obj) => {
     return zodTransform(obj, {
       id: "id",
-      operationId: "operationId",
+      operationId: "operation_id",
     });
   });
 
@@ -93,7 +93,7 @@ export type GetRequest = {
  */
 export type External$GetRequest = {
   id: string;
-  operationId: string;
+  operation_id: string;
 };
 
 /**
@@ -106,12 +106,12 @@ const SchemaIn$GetRequest: z.ZodType<
 > = z
   .object({
     id: z.string(),
-    operationId: z.string(),
+    operation_id: z.string(),
   })
   .transform((obj) => {
     return zodTransform(obj, {
       id: "id",
-      operationId: "operationId",
+      operation_id: "operationId",
     });
   });
 
@@ -131,7 +131,7 @@ const SchemaOut$GetRequest: z.ZodType<
   .transform((obj) => {
     return zodTransform(obj, {
       id: "id",
-      operationId: "operationId",
+      operationId: "operation_id",
     });
   });
 
@@ -157,7 +157,7 @@ export type PatchRequest = {
 export type External$PatchRequest = {
   data?: External$IntegrationsApiOperationsPatchBody | undefined;
   id: string;
-  operationId: string;
+  operation_id: string;
 };
 
 /**
@@ -171,13 +171,13 @@ const SchemaIn$PatchRequest: z.ZodType<
   .object({
     data: Schemas$IntegrationsApiOperationsPatchBody.in.optional(),
     id: z.string(),
-    operationId: z.string(),
+    operation_id: z.string(),
   })
   .transform((obj) => {
     return zodTransform(obj, {
       data: "data",
       id: "id",
-      operationId: "operationId",
+      operation_id: "operationId",
     });
   });
 
@@ -199,7 +199,7 @@ const SchemaOut$PatchRequest: z.ZodType<
     return zodTransform(obj, {
       data: "data",
       id: "id",
-      operationId: "operationId",
+      operationId: "operation_id",
     });
   });
 

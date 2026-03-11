@@ -16,7 +16,7 @@
 #### Example Snippet
 
 ```typescript
-import Client from "api_ts";
+import { Client } from "api_ts";
 
 const client = new Client({
   apiKey: process.env["API_KEY"]!!,
@@ -54,7 +54,7 @@ const res = await client.integrations.api.operations.delete({
 #### Example Snippet
 
 ```typescript
-import Client from "api_ts";
+import { Client } from "api_ts";
 
 const client = new Client({
   apiKey: process.env["API_KEY"]!!,
@@ -96,7 +96,7 @@ const res = await client.integrations.api.operations.get({
 #### Example Snippet
 
 ```typescript
-import Client from "api_ts";
+import { Client } from "api_ts";
 
 const client = new Client({
   apiKey: process.env["API_KEY"]!!,
@@ -138,7 +138,7 @@ const res = await client.integrations.api.operations.patch({
 #### Example Snippet
 
 ```typescript
-import Client from "api_ts";
+import { Client } from "api_ts";
 
 const client = new Client({
   apiKey: process.env["API_KEY"]!!,

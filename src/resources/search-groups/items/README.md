@@ -15,7 +15,7 @@
 #### Example Snippet
 
 ```typescript
-import Client from "api_ts";
+import { Client } from "api_ts";
 
 const client = new Client({
   apiKey: process.env["API_KEY"]!!,
@@ -51,7 +51,7 @@ const res = await client.searchGroups.items.get({ id: "string" });
 #### Example Snippet
 
 ```typescript
-import Client from "api_ts";
+import { Client } from "api_ts";
 
 const client = new Client({
   apiKey: process.env["API_KEY"]!!,
@@ -86,7 +86,7 @@ Array of [SearchGroupsItemsListResponseItem](/src/types/search-groups-items-list
 #### Example Snippet
 
 ```typescript
-import Client from "api_ts";
+import { Client } from "api_ts";
 
 const client = new Client({
   apiKey: process.env["API_KEY"]!!,

@@ -9,7 +9,7 @@
 #### Example Snippet
 
 ```typescript
-import Client from "api_ts";
+import { Client } from "api_ts";
 
 const client = new Client({
   apiKey: process.env["API_KEY"]!!,
@@ -43,7 +43,7 @@ Array of [FeedsListResponseItem](/src/types/feeds-list-response-item.ts)
 #### Example Snippet
 
 ```typescript
-import Client from "api_ts";
+import { Client } from "api_ts";
 
 const client = new Client({
   apiKey: process.env["API_KEY"]!!,
@@ -85,7 +85,7 @@ const res = await client.feeds.get({
 #### Example Snippet
 
 ```typescript
-import Client from "api_ts";
+import { Client } from "api_ts";
 
 const client = new Client({
   apiKey: process.env["API_KEY"]!!,

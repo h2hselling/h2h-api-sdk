@@ -17,7 +17,7 @@
 #### Example Snippet
 
 ```typescript
-import Client from "api_ts";
+import { Client } from "api_ts";
 
 const client = new Client({
   apiKey: process.env["API_KEY"]!!,
@@ -33,10 +33,10 @@ const res = await client.tools.internetSearch.create({
 
 ##### Type
 
-Array of [ToolsInternetSearchCreateResponseItem](/src/types/tools-internet-search-create-response-item.ts)
+[ToolsInternetSearchCreateResponse](/src/types/tools-internet-search-create-response.ts)
 
 ##### Example
 
 ```typescript
-[{"text": "string", "type": "string"}]
+{"markdown": "string"}
 ```

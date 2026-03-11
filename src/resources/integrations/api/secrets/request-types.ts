@@ -26,7 +26,7 @@ export type DeleteRequest = {
  */
 export type External$DeleteRequest = {
   id: string;
-  secretId: string;
+  secret_id: string;
 };
 
 /**
@@ -39,12 +39,12 @@ const SchemaIn$DeleteRequest: z.ZodType<
 > = z
   .object({
     id: z.string(),
-    secretId: z.string(),
+    secret_id: z.string(),
   })
   .transform((obj) => {
     return zodTransform(obj, {
       id: "id",
-      secretId: "secretId",
+      secret_id: "secretId",
     });
   });
 
@@ -64,7 +64,7 @@ const SchemaOut$DeleteRequest: z.ZodType<
   .transform((obj) => {
     return zodTransform(obj, {
       id: "id",
-      secretId: "secretId",
+      secretId: "secret_id",
     });
   });
 

@@ -65,8 +65,8 @@ export type External$CreateRequest = {
   inputs: Record<string, any | undefined>;
   language: "javascript" | "python" | "typescript";
   libraries?: string[] | undefined;
-  outputId?: string | undefined;
-  taskId?: string | undefined;
+  output_id?: string | undefined;
+  task_id?: string | undefined;
 
   [additionalProperty: string]:
     | string
@@ -95,8 +95,8 @@ const SchemaIn$CreateRequest: z.ZodType<
     inputs: z.record(z.string(), zodRequiredAny.optional()),
     language: z.enum(["javascript", "python", "typescript"]),
     libraries: z.array(z.string()).optional(),
-    outputId: z.string().optional(),
-    taskId: z.string().optional(),
+    output_id: z.string().optional(),
+    task_id: z.string().optional(),
   })
   .catchall(zodRequiredAny)
   .transform((obj) => {
@@ -106,8 +106,8 @@ const SchemaIn$CreateRequest: z.ZodType<
       inputs: "inputs",
       language: "language",
       libraries: "libraries",
-      outputId: "outputId",
-      taskId: "taskId",
+      output_id: "outputId",
+      task_id: "taskId",
     });
   });
 
@@ -137,8 +137,8 @@ const SchemaOut$CreateRequest: z.ZodType<
       inputs: "inputs",
       language: "language",
       libraries: "libraries",
-      outputId: "outputId",
-      taskId: "taskId",
+      outputId: "output_id",
+      taskId: "task_id",
     });
   });
 

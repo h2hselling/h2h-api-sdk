@@ -1,5 +1,5 @@
 {
-  "id": "f0a9c310-f0ed-4c16-8c6b-9af25255152f",
+  "id": "395bf13f-109b-428e-a28a-83a5c9a1e17d",
   "tracked_paths": [
     {
       "editable": false,
@@ -1087,7 +1087,7 @@
     },
     {
       "editable": false,
-      "path": "src/types/tools-internet-search-create-response-item.ts"
+      "path": "src/types/tools-internet-search-create-response.ts"
     },
     {
       "editable": false,
