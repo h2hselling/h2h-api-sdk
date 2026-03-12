@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Refresh token <a name="create"></a>
+### Refresh an auth token <a name="create"></a>
+
+Exchange a valid refresh token for a new access token and refresh token pair.
 
 **API Endpoint**: `POST /auth/refresh`
 

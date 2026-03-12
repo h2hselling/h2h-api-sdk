@@ -4,6 +4,8 @@
 
 ### Run a query against feed embeddings <a name="create"></a>
 
+Search feed embeddings for semantically relevant items within the provided date range.
+
 **API Endpoint**: `POST /feeds/{id}/vector/search`
 
 #### Parameters

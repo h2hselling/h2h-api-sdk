@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Query the memory table <a name="create"></a>
+### Query memory <a name="create"></a>
+
+Query or mutate a memory table using a single tool-oriented request format.
 
 **API Endpoint**: `POST /tools/memory_query`
 

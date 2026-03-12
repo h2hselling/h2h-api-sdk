@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Get token <a name="create"></a>
+### Log in <a name="create"></a>
+
+Authenticate with an email address and password to receive an access token and refresh token.
 
 **API Endpoint**: `POST /auth/login`
 

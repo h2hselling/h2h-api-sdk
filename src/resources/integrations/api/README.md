@@ -4,6 +4,8 @@
 
 ### Delete an API integration <a name="delete"></a>
 
+Delete an API integration by its ID.
+
 **API Endpoint**: `DELETE /integrations/api/{id}`
 
 #### Parameters
@@ -38,6 +40,8 @@ const res = await client.integrations.api.delete({ id: "string" });
 
 ### Get an API integration by ID <a name="get"></a>
 
+Retrieve a single API integration by its ID.
+
 **API Endpoint**: `GET /integrations/api/{id}`
 
 #### Parameters
@@ -71,6 +75,8 @@ const res = await client.integrations.api.get({ id: "string" });
 ```
 
 ### Create a new API integration <a name="create"></a>
+
+Create a new API integration for the authenticated user.
 
 **API Endpoint**: `POST /integrations/api`
 

@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Search for dictionary definitions related to a feed item <a name="create"></a>
+### Search dictionary definitions <a name="create"></a>
+
+Search configured dictionary search groups for definitions that match the provided input text.
 
 **API Endpoint**: `POST /tools/dictionary_search`
 

@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Dispatch a new workflow run. This is an asynchronous call that will return the workflow run ID and allow you to poll for the result. <a name="create"></a>
+### Dispatch a workflow <a name="create"></a>
+
+Dispatch a new workflow run asynchronously. This call returns the workflow run ID so the caller can poll for the result.
 
 **API Endpoint**: `POST /workflows/{workflow_id}/dispatch`
 

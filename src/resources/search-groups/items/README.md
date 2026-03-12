@@ -4,6 +4,8 @@
 
 ### Get a search item by id <a name="get"></a>
 
+Retrieve a single search item by its ID.
+
 **API Endpoint**: `GET /search_groups/items/{id}`
 
 #### Parameters
@@ -37,6 +39,8 @@ const res = await client.searchGroups.items.get({ id: "string" });
 ```
 
 ### List search items in a search group <a name="list"></a>
+
+Retrieve a paginated list of search items that belong to a specific search group.
 
 **API Endpoint**: `GET /search_groups/{id}/items`
 
@@ -73,6 +77,8 @@ Array of [SearchGroupsItemsListResponseItem](/src/types/search-groups-items-list
 ```
 
 ### Create a new search item in a search group <a name="create"></a>
+
+Create a new search item under the specified search group.
 
 **API Endpoint**: `POST /search_groups/{id}/items`
 

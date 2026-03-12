@@ -4,6 +4,8 @@
 
 ### Get a specific feed item by ID <a name="get"></a>
 
+Retrieve a feed item by ID, including its stored payload data.
+
 **API Endpoint**: `GET /feeds/items/{id}`
 
 #### Parameters
@@ -37,6 +39,8 @@ const res = await client.feeds.items.get({ id: "string" });
 ```
 
 ### Create a new feed item for an API feed <a name="create"></a>
+
+Create a new feed item, persist its payload, and optionally trigger workflow runs for the associated feed.
 
 **API Endpoint**: `POST /feeds/items`
 

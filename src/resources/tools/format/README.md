@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Format an input into HTML or Markdown <a name="create"></a>
+### Format content <a name="create"></a>
+
+Format an input string into HTML or Markdown using the formatting tool.
 
 **API Endpoint**: `POST /tools/format`
 

@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Internet search tool <a name="create"></a>
+### Run internet search <a name="create"></a>
+
+Use the internet search tool to answer a prompt with live web search support.
 
 **API Endpoint**: `POST /tools/internet_search`
 

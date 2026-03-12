@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Standard LLM tool <a name="create"></a>
+### Run standard LLM <a name="create"></a>
+
+Send a standard LLM request and return the model response content.
 
 **API Endpoint**: `POST /tools/standard_llm`
 

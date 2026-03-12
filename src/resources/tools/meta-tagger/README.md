@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Meta Tag a feed item <a name="create"></a>
+### Apply meta tags <a name="create"></a>
+
+Apply the most relevant meta tags from the provided search groups to the input data.
 
 **API Endpoint**: `POST /tools/meta_tagger`
 

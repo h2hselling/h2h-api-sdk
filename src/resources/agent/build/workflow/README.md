@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Get the output of a workflow <a name="list"></a>
+### Get workflow build output <a name="list"></a>
+
+Retrieve the latest workflow build output for an agent build chat.
 
 **API Endpoint**: `GET /agent/build/workflow`
 
@@ -37,6 +39,8 @@ const res = await client.agent.build.workflow.list();
 ```
 
 ### Build a workflow <a name="create"></a>
+
+Start or continue an agent-assisted workflow build session.
 
 **API Endpoint**: `POST /agent/build/workflow`
 

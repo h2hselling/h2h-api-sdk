@@ -4,6 +4,8 @@
 
 ### List search groups <a name="list"></a>
 
+Retrieve a paginated list of search groups, optionally filtered by search group type.
+
 **API Endpoint**: `GET /search_groups`
 
 #### Parameters
@@ -40,6 +42,8 @@ Array of [SearchGroupsListResponseItem](/src/types/search-groups-list-response-i
 
 ### Get a search group by id <a name="get"></a>
 
+Retrieve a single search group by its ID.
+
 **API Endpoint**: `GET /search_groups/{id}`
 
 #### Parameters
@@ -73,6 +77,8 @@ const res = await client.searchGroups.get({ id: "string" });
 ```
 
 ### Create a new dictionary <a name="create"></a>
+
+Create a new search group for dictionary, meta tag, or document search items.
 
 **API Endpoint**: `POST /search_groups`
 

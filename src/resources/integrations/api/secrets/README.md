@@ -4,6 +4,8 @@
 
 ### Delete an API secret <a name="delete"></a>
 
+Delete an API secret from the specified API integration.
+
 **API Endpoint**: `DELETE /integrations/api/{id}/secrets/{secretId}`
 
 #### Parameters
@@ -42,6 +44,8 @@ const res = await client.integrations.api.secrets.delete({
 
 ### Get all API secrets for an API integration <a name="list"></a>
 
+Retrieve all API secrets configured for the specified API integration.
+
 **API Endpoint**: `GET /integrations/api/{id}/secrets`
 
 #### Parameters
@@ -75,6 +79,8 @@ Array of [IntegrationsApiSecretsListResponseItem](/src/types/integrations-api-se
 ```
 
 ### Create a new API secret <a name="create"></a>
+
+Create and encrypt a new API secret for the specified API integration.
 
 **API Endpoint**: `POST /integrations/api/{id}/secrets`
 

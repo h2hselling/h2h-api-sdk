@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Execute code and return the result <a name="create"></a>
+### Execute code <a name="create"></a>
+
+Execute code in a supported language and return logs, structured outputs, and the final result.
 
 **API Endpoint**: `POST /tools/code_execution`
 

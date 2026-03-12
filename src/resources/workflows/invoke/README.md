@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Invoke a new workflow run. This is a synchronous call that will wait for the workflow run to complete and return the result. <a name="create"></a>
+### Invoke a workflow <a name="create"></a>
+
+Invoke a workflow run. This is a synchronous call that waits for the workflow run to complete and returns the result.
 
 **API Endpoint**: `POST /workflows/{workflow_id}/invoke`
 

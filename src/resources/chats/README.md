@@ -4,7 +4,7 @@
 
 ### Get a chat <a name="get"></a>
 
-Get a chat by chat id
+Retrieve a chat by its ID, including its stored message history.
 
 **API Endpoint**: `GET /chats/{id}`
 
@@ -40,7 +40,7 @@ const res = await client.chats.get({ id: "string" });
 
 ### Continue a chat <a name="patch"></a>
 
-Continue a chat by chat id
+Continue an existing chat by appending a new user query and returning the updated messages.
 
 **API Endpoint**: `PATCH /chats/{id}`
 
@@ -79,7 +79,7 @@ const res = await client.chats.patch({ id: "string" });
 
 ### Create a chat <a name="create"></a>
 
-Create a chat by chat id
+Create a new chat for the provided ID and initialize it with the first query.
 
 **API Endpoint**: `POST /chats/{id}`
 

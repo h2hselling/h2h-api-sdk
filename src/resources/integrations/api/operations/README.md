@@ -4,6 +4,8 @@
 
 ### Delete an API operation <a name="delete"></a>
 
+Delete an API operation by its ID.
+
 **API Endpoint**: `DELETE /integrations/api/{id}/operations/{operationId}`
 
 #### Parameters
@@ -42,6 +44,8 @@ const res = await client.integrations.api.operations.delete({
 
 ### Get an API operation by ID <a name="get"></a>
 
+Retrieve a single API operation by its ID.
+
 **API Endpoint**: `GET /integrations/api/{id}/operations/{operationId}`
 
 #### Parameters
@@ -79,6 +83,8 @@ const res = await client.integrations.api.operations.get({
 ```
 
 ### Update an API operation <a name="patch"></a>
+
+Update an existing API operation by its ID.
 
 **API Endpoint**: `PATCH /integrations/api/{id}/operations/{operationId}`
 
@@ -121,6 +127,8 @@ const res = await client.integrations.api.operations.patch({
 ```
 
 ### Create a new API operation <a name="create"></a>
+
+Create a new API operation under the specified API integration.
 
 **API Endpoint**: `POST /integrations/api/{id}/operations`
 

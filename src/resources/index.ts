@@ -3,9 +3,10 @@ export * as auth from "./auth";
 export * as chats from "./chats";
 export * as feeds from "./feeds";
 export * as integrations from "./integrations";
+export * as memory from "./memory";
 export * as searchGroups from "./search-groups";
+export * as subscriptions from "./subscriptions";
 export * as tools from "./tools";
-export * as workflow from "./workflow";
 export * as workflows from "./workflows";
 
 /**

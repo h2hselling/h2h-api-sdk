@@ -4,6 +4,8 @@
 
 ### List all feeds <a name="list"></a>
 
+Retrieve all feeds owned by the authenticated user.
+
 **API Endpoint**: `GET /feeds`
 
 #### Example Snippet
@@ -31,6 +33,8 @@ Array of [FeedsListResponseItem](/src/types/feeds-list-response-item.ts)
 ```
 
 ### Get a specific feed by ID <a name="get"></a>
+
+Retrieve a single feed by its ID.
 
 **API Endpoint**: `GET /feeds/{id}`
 
@@ -67,6 +71,8 @@ const res = await client.feeds.get({
 ```
 
 ### Create a new feed <a name="create"></a>
+
+Create a new feed and configure its source details based on the selected feed type.
 
 **API Endpoint**: `POST /feeds`
 

@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Get all tools <a name="list"></a>
+### List tools <a name="list"></a>
+
+Retrieve the active tool definitions that are available to the authenticated user.
 
 **API Endpoint**: `GET /tools`
 

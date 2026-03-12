@@ -2,7 +2,9 @@
 
 ## Module Functions
 
-### Structured output tool <a name="create"></a>
+### Generate structured output <a name="create"></a>
+
+Transform unstructured input into JSON that matches the provided schema.
 
 **API Endpoint**: `POST /tools/structured_output`
 
