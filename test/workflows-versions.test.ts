@@ -114,20 +114,16 @@ describe("tests client.workflows.versions.patch", () => {
       const [rawResponse, response] = await Promise.all([
         client.workflows.versions
           .patch({
-            access: "string",
             active: true,
             description: "string",
-            instructions: "string",
             name: "string",
             originId: "string",
             versionId: "string",
           })
           .asResponse(),
         client.workflows.versions.patch({
-          access: "string",
           active: true,
           description: "string",
-          instructions: "string",
           name: "string",
           originId: "string",
           versionId: "string",
@@ -153,20 +149,44 @@ describe("tests client.workflows.versions.create", () => {
       const [rawResponse, response] = await Promise.all([
         client.workflows.versions
           .create({
-            access: "string",
             active: true,
             description: "string",
-            instructions: "string",
             name: "string",
+            tasks: [
+              {
+                config: {},
+                createdAt: "string",
+                description: "string",
+                id: "string",
+                name: "string",
+                outputSchema: {},
+                parentTasks: {},
+                toolId: "string",
+                uiConfig: {},
+                workflowId: "string",
+              },
+            ],
             originId: "string",
           })
           .asResponse(),
         client.workflows.versions.create({
-          access: "string",
           active: true,
           description: "string",
-          instructions: "string",
           name: "string",
+          tasks: [
+            {
+              config: {},
+              createdAt: "string",
+              description: "string",
+              id: "string",
+              name: "string",
+              outputSchema: {},
+              parentTasks: {},
+              toolId: "string",
+              uiConfig: {},
+              workflowId: "string",
+            },
+          ],
           originId: "string",
         }),
       ]);

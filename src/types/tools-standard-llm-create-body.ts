@@ -15,15 +15,45 @@ import {
  * ToolsStandardLlmCreateBody
  */
 export type ToolsStandardLlmCreateBody = {
+  /**
+   * The maximum number of tokens to generate
+   */
+  maxTokens?: number | null | undefined;
   messages: ToolsStandardLlmCreateBodyMessagesItem[];
+  /**
+   * The name of the model to use for the LLM
+   */
+  model?: string | null | undefined;
+  /**
+   * The stop sequences to use for the LLM
+   */
+  stopSequences?: string[] | null | undefined;
   system: string;
+  /**
+   * The temperature to use for the LLM
+   */
+  temperature?: number | null | undefined;
+  /**
+   * The top k to use for the LLM
+   */
+  topK?: number | null | undefined;
+  /**
+   * The top p to use for the LLM
+   */
+  topP?: number | null | undefined;
 
   // Index types must also accommodate all defined properties if present (typescript limitation)
   // In reality all additional properties should only have type `any`
   // (there might be some duplication here)
   [additionalProperty: string]:
+    | (number | null | undefined)
     | ToolsStandardLlmCreateBodyMessagesItem[]
+    | (string | null | undefined)
+    | (string[] | null | undefined)
     | string
+    | (number | null | undefined)
+    | (number | null | undefined)
+    | (number | null | undefined)
     | any
     | null
     | undefined;
@@ -35,12 +65,24 @@ export type ToolsStandardLlmCreateBody = {
  * we expect to come in as network data
  */
 export type External$ToolsStandardLlmCreateBody = {
+  max_tokens?: number | null | undefined;
   messages: External$ToolsStandardLlmCreateBodyMessagesItem[];
+  model?: string | null | undefined;
+  stop_sequences?: string[] | null | undefined;
   system: string;
+  temperature?: number | null | undefined;
+  top_k?: number | null | undefined;
+  top_p?: number | null | undefined;
 
   [additionalProperty: string]:
+    | (number | null | undefined)
     | External$ToolsStandardLlmCreateBodyMessagesItem[]
+    | (string | null | undefined)
+    | (string[] | null | undefined)
     | string
+    | (number | null | undefined)
+    | (number | null | undefined)
+    | (number | null | undefined)
     | External$ToolsStandardLlmCreateBody
     | null
     | undefined;
@@ -55,14 +97,26 @@ const SchemaIn$ToolsStandardLlmCreateBody: z.ZodType<
   unknown
 > = z
   .object({
+    max_tokens: z.number().int().nullable().optional(),
     messages: z.array(Schemas$ToolsStandardLlmCreateBodyMessagesItem.in),
+    model: z.string().nullable().optional(),
+    stop_sequences: z.array(z.string()).nullable().optional(),
     system: z.string(),
+    temperature: z.number().nullable().optional(),
+    top_k: z.number().int().nullable().optional(),
+    top_p: z.number().nullable().optional(),
   })
   .catchall(zodRequiredAny)
   .transform((obj) => {
     return zodTransform(obj, {
+      max_tokens: "maxTokens",
       messages: "messages",
+      model: "model",
+      stop_sequences: "stopSequences",
       system: "system",
+      temperature: "temperature",
+      top_k: "topK",
+      top_p: "topP",
     });
   });
 
@@ -76,14 +130,26 @@ const SchemaOut$ToolsStandardLlmCreateBody: z.ZodType<
   ToolsStandardLlmCreateBody // the object to be transformed
 > = z
   .object({
+    maxTokens: z.number().int().nullable().optional(),
     messages: z.array(Schemas$ToolsStandardLlmCreateBodyMessagesItem.out),
+    model: z.string().nullable().optional(),
+    stopSequences: z.array(z.string()).nullable().optional(),
     system: z.string(),
+    temperature: z.number().nullable().optional(),
+    topK: z.number().int().nullable().optional(),
+    topP: z.number().nullable().optional(),
   })
   .catchall(zodRequiredAny)
   .transform((obj) => {
     return zodTransform(obj, {
+      maxTokens: "max_tokens",
       messages: "messages",
+      model: "model",
+      stopSequences: "stop_sequences",
       system: "system",
+      temperature: "temperature",
+      topK: "top_k",
+      topP: "top_p",
     });
   });
 

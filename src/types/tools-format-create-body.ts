@@ -5,6 +5,12 @@
 import { zodRequiredAny, zodTransform } from "make-api-request-js";
 import * as z from "zod";
 
+import {
+  External$ToolsFormatCreateBodyParams,
+  Schemas$ToolsFormatCreateBodyParams,
+  ToolsFormatCreateBodyParams,
+} from "./tools-format-create-body-params";
+
 /**
  * ToolsFormatCreateBody
  */
@@ -21,6 +27,7 @@ export type ToolsFormatCreateBody = {
    * Instructions for the formatter
    */
   instructions: string;
+  params?: ToolsFormatCreateBodyParams | undefined;
 
   // Index types must also accommodate all defined properties if present (typescript limitation)
   // In reality all additional properties should only have type `any`
@@ -29,6 +36,7 @@ export type ToolsFormatCreateBody = {
     | ("html" | "markdown")
     | string
     | string
+    | (ToolsFormatCreateBodyParams | undefined)
     | any
     | null
     | undefined;
@@ -43,11 +51,13 @@ export type External$ToolsFormatCreateBody = {
   format: "html" | "markdown";
   input: string;
   instructions: string;
+  params?: External$ToolsFormatCreateBodyParams | undefined;
 
   [additionalProperty: string]:
     | ("html" | "markdown")
     | string
     | string
+    | (External$ToolsFormatCreateBodyParams | undefined)
     | External$ToolsFormatCreateBody
     | null
     | undefined;
@@ -65,6 +75,7 @@ const SchemaIn$ToolsFormatCreateBody: z.ZodType<
     format: z.enum(["html", "markdown"]),
     input: z.string(),
     instructions: z.string(),
+    params: Schemas$ToolsFormatCreateBodyParams.in.optional(),
   })
   .catchall(zodRequiredAny)
   .transform((obj) => {
@@ -72,6 +83,7 @@ const SchemaIn$ToolsFormatCreateBody: z.ZodType<
       format: "format",
       input: "input",
       instructions: "instructions",
+      params: "params",
     });
   });
 
@@ -88,6 +100,7 @@ const SchemaOut$ToolsFormatCreateBody: z.ZodType<
     format: z.enum(["html", "markdown"]),
     input: z.string(),
     instructions: z.string(),
+    params: Schemas$ToolsFormatCreateBodyParams.out.optional(),
   })
   .catchall(zodRequiredAny)
   .transform((obj) => {
@@ -95,6 +108,7 @@ const SchemaOut$ToolsFormatCreateBody: z.ZodType<
       format: "format",
       input: "input",
       instructions: "instructions",
+      params: "params",
     });
   });
 

@@ -10,10 +10,6 @@ import * as z from "zod";
  */
 export type WorkflowsVersionsPatchBody = {
   /**
-   * Updated access level
-   */
-  access?: string | undefined;
-  /**
    * Updated active status
    */
   active?: boolean | undefined;
@@ -21,10 +17,6 @@ export type WorkflowsVersionsPatchBody = {
    * Updated description
    */
   description?: string | undefined;
-  /**
-   * Updated instructions
-   */
-  instructions?: string | null | undefined;
   /**
    * Updated name
    */
@@ -34,10 +26,8 @@ export type WorkflowsVersionsPatchBody = {
   // In reality all additional properties should only have type `any`
   // (there might be some duplication here)
   [additionalProperty: string]:
-    | (string | undefined)
     | (boolean | undefined)
     | (string | undefined)
-    | (string | null | undefined)
     | (string | undefined)
     | any
     | null
@@ -50,17 +40,13 @@ export type WorkflowsVersionsPatchBody = {
  * we expect to come in as network data
  */
 export type External$WorkflowsVersionsPatchBody = {
-  access?: string | undefined;
   active?: boolean | undefined;
   description?: string | undefined;
-  instructions?: string | null | undefined;
   name?: string | undefined;
 
   [additionalProperty: string]:
-    | (string | undefined)
     | (boolean | undefined)
     | (string | undefined)
-    | (string | null | undefined)
     | (string | undefined)
     | External$WorkflowsVersionsPatchBody
     | null
@@ -76,19 +62,15 @@ const SchemaIn$WorkflowsVersionsPatchBody: z.ZodType<
   unknown
 > = z
   .object({
-    access: z.string().optional(),
     active: z.boolean().optional(),
     description: z.string().optional(),
-    instructions: z.string().nullable().optional(),
     name: z.string().optional(),
   })
   .catchall(zodRequiredAny)
   .transform((obj) => {
     return zodTransform(obj, {
-      access: "access",
       active: "active",
       description: "description",
-      instructions: "instructions",
       name: "name",
     });
   });
@@ -103,19 +85,15 @@ const SchemaOut$WorkflowsVersionsPatchBody: z.ZodType<
   WorkflowsVersionsPatchBody // the object to be transformed
 > = z
   .object({
-    access: z.string().optional(),
     active: z.boolean().optional(),
     description: z.string().optional(),
-    instructions: z.string().nullable().optional(),
     name: z.string().optional(),
   })
   .catchall(zodRequiredAny)
   .transform((obj) => {
     return zodTransform(obj, {
-      access: "access",
       active: "active",
       description: "description",
-      instructions: "instructions",
       name: "name",
     });
   });

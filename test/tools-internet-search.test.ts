@@ -17,15 +17,27 @@ describe("tests client.tools.internetSearch.create", () => {
       const [rawResponse, response] = await Promise.all([
         client.tools.internetSearch
           .create({
+            maxTokens: 123,
             maxUses: 123,
             messages: [{ content: "string", role: "assistant" }],
+            model: "string",
+            stopSequences: ["string"],
             system: "string",
+            temperature: 123.45,
+            topK: 123,
+            topP: 123.45,
           })
           .asResponse(),
         client.tools.internetSearch.create({
+          maxTokens: 123,
           maxUses: 123,
           messages: [{ content: "string", role: "assistant" }],
+          model: "string",
+          stopSequences: ["string"],
           system: "string",
+          temperature: 123.45,
+          topK: 123,
+          topP: 123.45,
         }),
       ]);
       expect(rawResponse.status).toBe(200); // Exact status code match

@@ -159,13 +159,12 @@ Create a new workflow (workflow origin). This creates the top-level workflow con
 
 #### Parameters
 
-| Parameter              | Required | Description                                           | Example    |
-| ---------------------- | :------: | ----------------------------------------------------- | ---------- |
-| `description`          |    ✓     | Description of the workflow                           | `"string"` |
-| `name`                 |    ✓     | Name of the workflow                                  | `"string"` |
-| `workflowId`           |    ✓     | The ID of the initial workflow version to associate   | `"string"` |
-| `additionalProperties` |    ✗     |                                                       | `{}`       |
-| `originId`             |    ✗     | Parent origin ID if forking from an existing workflow | `"string"` |
+| Parameter              | Required | Description                    | Example    |
+| ---------------------- | :------: | ------------------------------ | ---------- |
+| `description`          |    ✓     | Description of the workflow    | `"string"` |
+| `name`                 |    ✓     | Name of the workflow           | `"string"` |
+| `active`               |    ✗     | Whether the workflow is active | `true`     |
+| `additionalProperties` |    ✗     |                                | `{}`       |
 
 #### Example Snippet
 
@@ -179,7 +178,6 @@ const client = new Client({
 const res = await client.workflows.create({
   description: "string",
   name: "string",
-  workflowId: "string",
 });
 ```
 
@@ -192,7 +190,7 @@ const res = await client.workflows.create({
 ##### Example
 
 ```typescript
-{"createdAt": "string", "description": "string", "id": "string", "name": "string", "updatedAt": "string", "userId": "string", "workflowId": "string"}
+{}
 ```
 
 ## Submodules

@@ -10,12 +10,19 @@ Format an input string into HTML or Markdown using the formatting tool.
 
 #### Parameters
 
-| Parameter              | Required | Description                    | Example    |
-| ---------------------- | :------: | ------------------------------ | ---------- |
-| `format`               |    ✓     | Desired output format          | `"html"`   |
-| `input`                |    ✓     | Input to format                | `"string"` |
-| `instructions`         |    ✓     | Instructions for the formatter | `"string"` |
-| `additionalProperties` |    ✗     |                                | `{}`       |
+| Parameter              | Required | Description                              | Example      |
+| ---------------------- | :------: | ---------------------------------------- | ------------ |
+| `format`               |    ✓     | Desired output format                    | `"html"`     |
+| `input`                |    ✓     | Input to format                          | `"string"`   |
+| `instructions`         |    ✓     | Instructions for the formatter           | `"string"`   |
+| `additionalProperties` |    ✗     |                                          | `{}`         |
+| `params`               |    ✗     |                                          | `{}`         |
+| `└─ maxTokens`         |    ✗     | The maximum number of tokens to generate | `123`        |
+| `└─ model`             |    ✗     | The name of the model to use for the LLM | `"string"`   |
+| `└─ stopSequences`     |    ✗     | The stop sequences to use for the LLM    | `["string"]` |
+| `└─ temperature`       |    ✗     | The temperature to use for the LLM       | `123.0`      |
+| `└─ topK`              |    ✗     | The top k to use for the LLM             | `123`        |
+| `└─ topP`              |    ✗     | The top p to use for the LLM             | `123.0`      |
 
 #### Example Snippet
 

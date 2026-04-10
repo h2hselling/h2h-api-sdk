@@ -16,12 +16,32 @@ describe("tests client.tools.format.create", () => {
       // Get both raw response for status and parsed response for data
       const [rawResponse, response] = await Promise.all([
         client.tools.format
-          .create({ format: "html", input: "string", instructions: "string" })
+          .create({
+            format: "html",
+            input: "string",
+            instructions: "string",
+            params: {
+              maxTokens: 123,
+              model: "string",
+              stopSequences: ["string"],
+              temperature: 123.45,
+              topK: 123,
+              topP: 123.45,
+            },
+          })
           .asResponse(),
         client.tools.format.create({
           format: "html",
           input: "string",
           instructions: "string",
+          params: {
+            maxTokens: 123,
+            model: "string",
+            stopSequences: ["string"],
+            temperature: 123.45,
+            topK: 123,
+            topP: 123.45,
+          },
         }),
       ]);
       expect(rawResponse.status).toBe(200); // Exact status code match

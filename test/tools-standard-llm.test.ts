@@ -17,13 +17,25 @@ describe("tests client.tools.standardLlm.create", () => {
       const [rawResponse, response] = await Promise.all([
         client.tools.standardLlm
           .create({
+            maxTokens: 123,
             messages: [{ content: "string", role: "assistant" }],
+            model: "string",
+            stopSequences: ["string"],
             system: "string",
+            temperature: 123.45,
+            topK: 123,
+            topP: 123.45,
           })
           .asResponse(),
         client.tools.standardLlm.create({
+          maxTokens: 123,
           messages: [{ content: "string", role: "assistant" }],
+          model: "string",
+          stopSequences: ["string"],
           system: "string",
+          temperature: 123.45,
+          topK: 123,
+          topP: 123.45,
         }),
       ]);
       expect(rawResponse.status).toBe(200); // Exact status code match

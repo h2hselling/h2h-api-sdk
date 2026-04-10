@@ -305,6 +305,10 @@ export const Schemas$PatchRequest = {
  */
 export type CreateRequest = {
   /**
+   * Whether the workflow is active
+   */
+  active?: boolean | undefined;
+  /**
    * Description of the workflow
    */
   description: string;
@@ -312,22 +316,13 @@ export type CreateRequest = {
    * Name of the workflow
    */
   name: string;
-  /**
-   * Parent origin ID if forking from an existing workflow
-   */
-  originId?: string | null | undefined;
-  /**
-   * The ID of the initial workflow version to associate
-   */
-  workflowId: string;
 
   // Index types must also accommodate all defined properties if present (typescript limitation)
   // In reality all additional properties should only have type `any`
   // (there might be some duplication here)
   [additionalProperty: string]:
+    | (boolean | undefined)
     | string
-    | string
-    | (string | null | undefined)
     | string
     | any
     | null
@@ -340,15 +335,13 @@ export type CreateRequest = {
  * we expect to come in as network data
  */
 export type External$CreateRequest = {
+  active?: boolean | undefined;
   description: string;
   name: string;
-  origin_id?: string | null | undefined;
-  workflow_id: string;
 
   [additionalProperty: string]:
+    | (boolean | undefined)
     | string
-    | string
-    | (string | null | undefined)
     | string
     | External$CreateRequest
     | null
@@ -364,18 +357,16 @@ const SchemaIn$CreateRequest: z.ZodType<
   unknown
 > = z
   .object({
+    active: z.boolean().optional(),
     description: z.string(),
     name: z.string(),
-    origin_id: z.string().nullable().optional(),
-    workflow_id: z.string(),
   })
   .catchall(zodRequiredAny)
   .transform((obj) => {
     return zodTransform(obj, {
+      active: "active",
       description: "description",
       name: "name",
-      origin_id: "originId",
-      workflow_id: "workflowId",
     });
   });
 
@@ -389,18 +380,16 @@ const SchemaOut$CreateRequest: z.ZodType<
   CreateRequest // the object to be transformed
 > = z
   .object({
+    active: z.boolean().optional(),
     description: z.string(),
     name: z.string(),
-    originId: z.string().nullable().optional(),
-    workflowId: z.string(),
   })
   .catchall(zodRequiredAny)
   .transform((obj) => {
     return zodTransform(obj, {
+      active: "active",
       description: "description",
       name: "name",
-      originId: "origin_id",
-      workflowId: "workflow_id",
     });
   });
 

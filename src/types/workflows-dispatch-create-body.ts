@@ -9,7 +9,7 @@ import * as z from "zod";
  * WorkflowsDispatchCreateBody
  */
 export type WorkflowsDispatchCreateBody = {
-  input: Record<string, any | undefined>;
+  inputs: Record<string, any | undefined>;
 };
 
 /**
@@ -18,7 +18,7 @@ export type WorkflowsDispatchCreateBody = {
  * we expect to come in as network data
  */
 export type External$WorkflowsDispatchCreateBody = {
-  input: Record<string, any | undefined>;
+  inputs: Record<string, any | undefined>;
 };
 
 /**
@@ -30,11 +30,11 @@ const SchemaIn$WorkflowsDispatchCreateBody: z.ZodType<
   unknown
 > = z
   .object({
-    input: z.record(z.string(), zodRequiredAny.optional()),
+    inputs: z.record(z.string(), zodRequiredAny.optional()),
   })
   .transform((obj) => {
     return zodTransform(obj, {
-      input: "input",
+      inputs: "inputs",
     });
   });
 
@@ -48,11 +48,11 @@ const SchemaOut$WorkflowsDispatchCreateBody: z.ZodType<
   WorkflowsDispatchCreateBody // the object to be transformed
 > = z
   .object({
-    input: z.record(z.string(), zodRequiredAny.optional()),
+    inputs: z.record(z.string(), zodRequiredAny.optional()),
   })
   .transform((obj) => {
     return zodTransform(obj, {
-      input: "input",
+      inputs: "inputs",
     });
   });
 

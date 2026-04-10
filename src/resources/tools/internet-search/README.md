@@ -10,11 +10,17 @@ Use the internet search tool to answer a prompt with live web search support.
 
 #### Parameters
 
-| Parameter  | Required | Description                                      | Example    |
-| ---------- | :------: | ------------------------------------------------ | ---------- |
-| `messages` |    ✓     |                                                  | `[{}]`     |
-| `system`   |    ✓     |                                                  | `"string"` |
-| `maxUses`  |    ✗     | The maximum number of times the tool can be used | `123`      |
+| Parameter       | Required | Description                                      | Example                                        |
+| --------------- | :------: | ------------------------------------------------ | ---------------------------------------------- |
+| `messages`      |    ✓     |                                                  | `[{"content": "string", "role": "assistant"}]` |
+| `system`        |    ✓     |                                                  | `"string"`                                     |
+| `maxTokens`     |    ✗     | The maximum number of tokens to generate         | `123`                                          |
+| `maxUses`       |    ✗     | The maximum number of times the tool can be used | `123`                                          |
+| `model`         |    ✗     | The name of the model to use for the LLM         | `"string"`                                     |
+| `stopSequences` |    ✗     | The stop sequences to use for the LLM            | `["string"]`                                   |
+| `temperature`   |    ✗     | The temperature to use for the LLM               | `123.0`                                        |
+| `topK`          |    ✗     | The top k to use for the LLM                     | `123`                                          |
+| `topP`          |    ✗     | The top p to use for the LLM                     | `123.0`                                        |
 
 #### Example Snippet
 
@@ -26,7 +32,7 @@ const client = new Client({
   token: process.env["API_TOKEN"]!!,
 });
 const res = await client.tools.internetSearch.create({
-  messages: [{}],
+  messages: [{ content: "string", role: "assistant" }],
   system: "string",
 });
 ```

@@ -1,5 +1,5 @@
 {
-  "id": "b20f32fa-cb9f-4299-9822-922fb9614694",
+  "id": "8a2f4d1c-eb13-4d9a-9cb9-47e5b214e46a",
   "tracked_paths": [
     {
       "editable": false,
@@ -100,6 +100,22 @@
     {
       "editable": true,
       "path": "src/resources/agent/build/workflow/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/history/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/history/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/agent/history/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/history/resource-client.ts"
     },
     {
       "editable": true,
@@ -208,38 +224,6 @@
     {
       "editable": true,
       "path": "src/resources/feeds/resource-client.ts"
-    },
-    {
-      "editable": true,
-      "path": "src/resources/feeds/vector/README.md"
-    },
-    {
-      "editable": true,
-      "path": "src/resources/feeds/vector/index.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/resources/feeds/vector/request-types.ts"
-    },
-    {
-      "editable": true,
-      "path": "src/resources/feeds/vector/resource-client.ts"
-    },
-    {
-      "editable": true,
-      "path": "src/resources/feeds/vector/search/README.md"
-    },
-    {
-      "editable": true,
-      "path": "src/resources/feeds/vector/search/index.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/resources/feeds/vector/search/request-types.ts"
-    },
-    {
-      "editable": true,
-      "path": "src/resources/feeds/vector/search/resource-client.ts"
     },
     {
       "editable": false,
@@ -678,6 +662,54 @@
       "path": "src/resources/workflows/versions/resource-client.ts"
     },
     {
+      "editable": true,
+      "path": "src/resources/workflows/versions/tasks/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflows/versions/tasks/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/workflows/versions/tasks/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workflows/versions/tasks/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workspace/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workspace/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/workspace/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workspace/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workspace/variables/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workspace/variables/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/workspace/variables/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/workspace/variables/resource-client.ts"
+    },
+    {
       "editable": false,
       "path": "src/types/agent-build-workflow-create-body.ts"
     },
@@ -815,6 +847,42 @@
     },
     {
       "editable": false,
+      "path": "src/types/agent-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-create-response-messages-item-role-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-create-response-messages-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-history-list-response-chats-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-history-list-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-list-response-messages-item-role-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-list-response-messages-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-list-response.ts"
+    },
+    {
+      "editable": false,
       "path": "src/types/auth-login-create-body.ts"
     },
     {
@@ -828,30 +896,6 @@
     {
       "editable": false,
       "path": "src/types/auth-refresh-create-response.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/chats-create-body.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/chats-create-response-messages-item-role-enum.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/chats-create-response-messages-item.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/chats-create-response-status-enum.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/chats-create-response-type-enum.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/chats-create-response.ts"
     },
     {
       "editable": false,
@@ -872,30 +916,6 @@
     {
       "editable": false,
       "path": "src/types/chats-get-response.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/chats-patch-body.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/chats-patch-response-messages-item-role-enum.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/chats-patch-response-messages-item.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/chats-patch-response-status-enum.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/chats-patch-response-type-enum.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/chats-patch-response.ts"
     },
     {
       "editable": false,
@@ -956,18 +976,6 @@
     {
       "editable": false,
       "path": "src/types/feeds-list-response-item.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/feeds-vector-search-create-body.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/feeds-vector-search-create-response-item-resource-type-enum.ts"
-    },
-    {
-      "editable": false,
-      "path": "src/types/feeds-vector-search-create-response-item.ts"
     },
     {
       "editable": true,
@@ -1283,6 +1291,10 @@
     },
     {
       "editable": false,
+      "path": "src/types/tools-format-create-body-params.ts"
+    },
+    {
+      "editable": false,
       "path": "src/types/tools-format-create-body.ts"
     },
     {
@@ -1375,11 +1387,19 @@
     },
     {
       "editable": false,
+      "path": "src/types/tools-structured-output-create-body-params.ts"
+    },
+    {
+      "editable": false,
       "path": "src/types/tools-structured-output-create-body.ts"
     },
     {
       "editable": false,
       "path": "src/types/workflows-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-create-response-versions-item.ts"
     },
     {
       "editable": false,
@@ -1471,6 +1491,10 @@
     },
     {
       "editable": false,
+      "path": "src/types/workflows-versions-create-body-tasks-item.ts"
+    },
+    {
+      "editable": false,
       "path": "src/types/workflows-versions-create-body.ts"
     },
     {
@@ -1480,6 +1504,18 @@
     {
       "editable": false,
       "path": "src/types/workflows-versions-delete-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-versions-get-response-origin.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-versions-get-response-tasks-item-tool.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-versions-get-response-tasks-item.ts"
     },
     {
       "editable": false,
@@ -1499,7 +1535,75 @@
     },
     {
       "editable": false,
+      "path": "src/types/workflows-versions-tasks-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-versions-tasks-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-versions-tasks-delete-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-versions-tasks-get-response-tool.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-versions-tasks-get-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-versions-tasks-patch-body-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-versions-tasks-patch-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workflows-versions-tasks-patch-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workspace-variables-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workspace-variables-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workspace-variables-delete-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workspace-variables-delete-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workspace-variables-list-response-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workspace-variables-patch-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/workspace-variables-patch-response.ts"
+    },
+    {
+      "editable": false,
       "path": "test/agent-build-workflow.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/agent-history.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/agent.test.ts"
     },
     {
       "editable": false,
@@ -1516,10 +1620,6 @@
     {
       "editable": false,
       "path": "test/feeds-items.test.ts"
-    },
-    {
-      "editable": false,
-      "path": "test/feeds-vector-search.test.ts"
     },
     {
       "editable": false,
@@ -1615,11 +1715,19 @@
     },
     {
       "editable": false,
+      "path": "test/workflows-versions-tasks.test.ts"
+    },
+    {
+      "editable": false,
       "path": "test/workflows-versions.test.ts"
     },
     {
       "editable": false,
       "path": "test/workflows.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/workspace-variables.test.ts"
     },
     {
       "editable": false,

@@ -36,27 +36,24 @@ export { AgentBuildWorkflowListResponseChatMessagesItemRoleEnum } from "./agent-
 export { AgentBuildWorkflowListResponseChatStatusEnum } from "./agent-build-workflow-list-response-chat-status-enum";
 export { AgentBuildWorkflowListResponseChatTypeEnum } from "./agent-build-workflow-list-response-chat-type-enum";
 export { AgentBuildWorkflowListResponseMessagesItem } from "./agent-build-workflow-list-response-messages-item";
+export { AgentCreateBody } from "./agent-create-body";
+export { AgentCreateResponse } from "./agent-create-response";
+export { AgentCreateResponseMessagesItem } from "./agent-create-response-messages-item";
+export { AgentCreateResponseMessagesItemRoleEnum } from "./agent-create-response-messages-item-role-enum";
+export { AgentHistoryListResponse } from "./agent-history-list-response";
+export { AgentHistoryListResponseChatsItem } from "./agent-history-list-response-chats-item";
+export { AgentListResponse } from "./agent-list-response";
+export { AgentListResponseMessagesItem } from "./agent-list-response-messages-item";
+export { AgentListResponseMessagesItemRoleEnum } from "./agent-list-response-messages-item-role-enum";
 export { AuthLoginCreateBody } from "./auth-login-create-body";
 export { AuthLoginCreateResponse } from "./auth-login-create-response";
 export { AuthRefreshCreateBody } from "./auth-refresh-create-body";
 export { AuthRefreshCreateResponse } from "./auth-refresh-create-response";
-export { ChatsCreateBody } from "./chats-create-body";
-export { ChatsCreateResponse } from "./chats-create-response";
-export { ChatsCreateResponseMessagesItem } from "./chats-create-response-messages-item";
-export { ChatsCreateResponseMessagesItemRoleEnum } from "./chats-create-response-messages-item-role-enum";
-export { ChatsCreateResponseStatusEnum } from "./chats-create-response-status-enum";
-export { ChatsCreateResponseTypeEnum } from "./chats-create-response-type-enum";
 export { ChatsGetResponse } from "./chats-get-response";
 export { ChatsGetResponseMessagesItem } from "./chats-get-response-messages-item";
 export { ChatsGetResponseMessagesItemRoleEnum } from "./chats-get-response-messages-item-role-enum";
 export { ChatsGetResponseStatusEnum } from "./chats-get-response-status-enum";
 export { ChatsGetResponseTypeEnum } from "./chats-get-response-type-enum";
-export { ChatsPatchBody } from "./chats-patch-body";
-export { ChatsPatchResponse } from "./chats-patch-response";
-export { ChatsPatchResponseMessagesItem } from "./chats-patch-response-messages-item";
-export { ChatsPatchResponseMessagesItemRoleEnum } from "./chats-patch-response-messages-item-role-enum";
-export { ChatsPatchResponseStatusEnum } from "./chats-patch-response-status-enum";
-export { ChatsPatchResponseTypeEnum } from "./chats-patch-response-type-enum";
 export { FeedsCreateBody } from "./feeds-create-body";
 export { FeedsCreateBodyConfigObj0 } from "./feeds-create-body-config-obj0";
 export { FeedsCreateBodyConfigObj2 } from "./feeds-create-body-config-obj2";
@@ -72,9 +69,6 @@ export { FeedsItemsCreateResponseWorkflowRunsItem } from "./feeds-items-create-r
 export { FeedsItemsGetResponse } from "./feeds-items-get-response";
 export { FeedsListResponseItem } from "./feeds-list-response-item";
 export { FeedsListResponseItemFeedTypeEnum } from "./feeds-list-response-item-feed-type-enum";
-export { FeedsVectorSearchCreateBody } from "./feeds-vector-search-create-body";
-export { FeedsVectorSearchCreateResponseItem } from "./feeds-vector-search-create-response-item";
-export { FeedsVectorSearchCreateResponseItemResourceTypeEnum } from "./feeds-vector-search-create-response-item-resource-type-enum";
 export { IntegrationsApiCreateBody } from "./integrations-api-create-body";
 export { IntegrationsApiCreateResponse } from "./integrations-api-create-response";
 export { IntegrationsApiDeleteResponse } from "./integrations-api-delete-response";
@@ -153,6 +147,7 @@ export { ToolsDictionarySearchCreateBody } from "./tools-dictionary-search-creat
 export { ToolsDictionarySearchCreateResponseItem } from "./tools-dictionary-search-create-response-item";
 export { ToolsFormatCreateBody } from "./tools-format-create-body";
 export { ToolsFormatCreateBodyFormatEnum } from "./tools-format-create-body-format-enum";
+export { ToolsFormatCreateBodyParams } from "./tools-format-create-body-params";
 export { ToolsFormatCreateResponseItem } from "./tools-format-create-response-item";
 export { ToolsInternetSearchCreateBody } from "./tools-internet-search-create-body";
 export { ToolsInternetSearchCreateBodyMessagesItem } from "./tools-internet-search-create-body-messages-item";
@@ -176,8 +171,10 @@ export { ToolsStandardLlmCreateBodyMessagesItem } from "./tools-standard-llm-cre
 export { ToolsStandardLlmCreateBodyMessagesItemRoleEnum } from "./tools-standard-llm-create-body-messages-item-role-enum";
 export { ToolsStandardLlmCreateResponseItem } from "./tools-standard-llm-create-response-item";
 export { ToolsStructuredOutputCreateBody } from "./tools-structured-output-create-body";
+export { ToolsStructuredOutputCreateBodyParams } from "./tools-structured-output-create-body-params";
 export { WorkflowsCreateBody } from "./workflows-create-body";
 export { WorkflowsCreateResponse } from "./workflows-create-response";
+export { WorkflowsCreateResponseVersionsItem } from "./workflows-create-response-versions-item";
 export { WorkflowsDeleteResponse } from "./workflows-delete-response";
 export { WorkflowsDispatchCreateBody } from "./workflows-dispatch-create-body";
 export { WorkflowsDispatchCreateResponse } from "./workflows-dispatch-create-response";
@@ -200,12 +197,35 @@ export { WorkflowsRunsGetResponseStatusEnum } from "./workflows-runs-get-respons
 export { WorkflowsRunsListResponseItem } from "./workflows-runs-list-response-item";
 export { WorkflowsRunsListResponseItemStatusEnum } from "./workflows-runs-list-response-item-status-enum";
 export { WorkflowsVersionsCreateBody } from "./workflows-versions-create-body";
+export { WorkflowsVersionsCreateBodyTasksItem } from "./workflows-versions-create-body-tasks-item";
 export { WorkflowsVersionsCreateResponse } from "./workflows-versions-create-response";
 export { WorkflowsVersionsDeleteResponse } from "./workflows-versions-delete-response";
 export { WorkflowsVersionsGetResponse } from "./workflows-versions-get-response";
+export { WorkflowsVersionsGetResponseOrigin } from "./workflows-versions-get-response-origin";
+export { WorkflowsVersionsGetResponseTasksItem } from "./workflows-versions-get-response-tasks-item";
+export { WorkflowsVersionsGetResponseTasksItemTool } from "./workflows-versions-get-response-tasks-item-tool";
 export { WorkflowsVersionsListResponseItem } from "./workflows-versions-list-response-item";
 export { WorkflowsVersionsPatchBody } from "./workflows-versions-patch-body";
 export { WorkflowsVersionsPatchResponse } from "./workflows-versions-patch-response";
+export { WorkflowsVersionsTasksCreateBody } from "./workflows-versions-tasks-create-body";
+export { WorkflowsVersionsTasksCreateResponse } from "./workflows-versions-tasks-create-response";
+export { WorkflowsVersionsTasksDeleteResponse } from "./workflows-versions-tasks-delete-response";
+export { WorkflowsVersionsTasksGetResponse } from "./workflows-versions-tasks-get-response";
+export { WorkflowsVersionsTasksGetResponseTool } from "./workflows-versions-tasks-get-response-tool";
+export { WorkflowsVersionsTasksPatchBody } from "./workflows-versions-tasks-patch-body";
+export { WorkflowsVersionsTasksPatchBodyTypeEnum } from "./workflows-versions-tasks-patch-body-type-enum";
+export { WorkflowsVersionsTasksPatchResponse } from "./workflows-versions-tasks-patch-response";
+export { WorkspaceVariablesCreateBody } from "./workspace-variables-create-body";
+export { WorkspaceVariablesCreateResponse } from "./workspace-variables-create-response";
+export { WorkspaceVariablesDeleteBody } from "./workspace-variables-delete-body";
+export { WorkspaceVariablesDeleteResponse } from "./workspace-variables-delete-response";
+export { WorkspaceVariablesListResponseItem } from "./workspace-variables-list-response-item";
+export { WorkspaceVariablesPatchBody } from "./workspace-variables-patch-body";
+export { WorkspaceVariablesPatchResponse } from "./workspace-variables-patch-response";
+/**
+ * Generated by Sideko (sideko.dev)
+ **/
+
 /**
  * Generated by Sideko (sideko.dev)
  **/

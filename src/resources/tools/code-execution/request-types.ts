@@ -18,6 +18,10 @@ export type CreateRequest = {
    */
   context?: Record<string, any | undefined> | undefined;
   /**
+   * An object of key-value pairs to be passed as environment variables to the code.
+   */
+  environment?: Record<string, any | undefined> | undefined;
+  /**
    * An object of key-value pairs to be passed as inputs to the code.
    */
   inputs: Record<string, any | undefined>;
@@ -44,6 +48,7 @@ export type CreateRequest = {
   [additionalProperty: string]:
     | string
     | (Record<string, any | undefined> | undefined)
+    | (Record<string, any | undefined> | undefined)
     | Record<string, any | undefined>
     | ("javascript" | "python" | "typescript")
     | (string[] | undefined)
@@ -62,6 +67,7 @@ export type CreateRequest = {
 export type External$CreateRequest = {
   code: string;
   context?: Record<string, any | undefined> | undefined;
+  environment?: Record<string, any | undefined> | undefined;
   inputs: Record<string, any | undefined>;
   language: "javascript" | "python" | "typescript";
   libraries?: string[] | undefined;
@@ -70,6 +76,7 @@ export type External$CreateRequest = {
 
   [additionalProperty: string]:
     | string
+    | (Record<string, any | undefined> | undefined)
     | (Record<string, any | undefined> | undefined)
     | Record<string, any | undefined>
     | ("javascript" | "python" | "typescript")
@@ -92,6 +99,7 @@ const SchemaIn$CreateRequest: z.ZodType<
   .object({
     code: z.string(),
     context: z.record(z.string(), zodRequiredAny.optional()).optional(),
+    environment: z.record(z.string(), zodRequiredAny.optional()).optional(),
     inputs: z.record(z.string(), zodRequiredAny.optional()),
     language: z.enum(["javascript", "python", "typescript"]),
     libraries: z.array(z.string()).optional(),
@@ -103,6 +111,7 @@ const SchemaIn$CreateRequest: z.ZodType<
     return zodTransform(obj, {
       code: "code",
       context: "context",
+      environment: "environment",
       inputs: "inputs",
       language: "language",
       libraries: "libraries",
@@ -123,6 +132,7 @@ const SchemaOut$CreateRequest: z.ZodType<
   .object({
     code: z.string(),
     context: z.record(z.string(), zodRequiredAny.optional()).optional(),
+    environment: z.record(z.string(), zodRequiredAny.optional()).optional(),
     inputs: z.record(z.string(), zodRequiredAny.optional()),
     language: z.enum(["javascript", "python", "typescript"]),
     libraries: z.array(z.string()).optional(),
@@ -134,6 +144,7 @@ const SchemaOut$CreateRequest: z.ZodType<
     return zodTransform(obj, {
       code: "code",
       context: "context",
+      environment: "environment",
       inputs: "inputs",
       language: "language",
       libraries: "libraries",

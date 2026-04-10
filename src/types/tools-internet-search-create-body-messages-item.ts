@@ -9,8 +9,8 @@ import * as z from "zod";
  * ToolsInternetSearchCreateBodyMessagesItem
  */
 export type ToolsInternetSearchCreateBodyMessagesItem = {
-  content?: string | undefined;
-  role?: ("assistant" | "user") | undefined;
+  content: string;
+  role: "assistant" | "user";
 };
 
 /**
@@ -19,8 +19,8 @@ export type ToolsInternetSearchCreateBodyMessagesItem = {
  * we expect to come in as network data
  */
 export type External$ToolsInternetSearchCreateBodyMessagesItem = {
-  content?: string | undefined;
-  role?: ("assistant" | "user") | undefined;
+  content: string;
+  role: "assistant" | "user";
 };
 
 /**
@@ -32,8 +32,8 @@ const SchemaIn$ToolsInternetSearchCreateBodyMessagesItem: z.ZodType<
   unknown
 > = z
   .object({
-    content: z.string().optional(),
-    role: z.enum(["assistant", "user"]).optional(),
+    content: z.string(),
+    role: z.enum(["assistant", "user"]),
   })
   .transform((obj) => {
     return zodTransform(obj, {
@@ -52,8 +52,8 @@ const SchemaOut$ToolsInternetSearchCreateBodyMessagesItem: z.ZodType<
   ToolsInternetSearchCreateBodyMessagesItem // the object to be transformed
 > = z
   .object({
-    content: z.string().optional(),
-    role: z.enum(["assistant", "user"]).optional(),
+    content: z.string(),
+    role: z.enum(["assistant", "user"]),
   })
   .transform((obj) => {
     return zodTransform(obj, {

@@ -5,6 +5,12 @@
 import { zodRequiredAny, zodTransform } from "make-api-request-js";
 import * as z from "zod";
 
+import {
+  External$WorkflowsVersionsCreateBodyTasksItem,
+  Schemas$WorkflowsVersionsCreateBodyTasksItem,
+  WorkflowsVersionsCreateBodyTasksItem,
+} from "api_ts/types/workflows-versions-create-body-tasks-item";
+
 /**
  * DeleteRequest
  */
@@ -223,10 +229,6 @@ export const Schemas$GetRequest = {
  */
 export type PatchRequest = {
   /**
-   * Updated access level
-   */
-  access?: string | undefined;
-  /**
    * Updated active status
    */
   active?: boolean | undefined;
@@ -234,10 +236,6 @@ export type PatchRequest = {
    * Updated description
    */
   description?: string | undefined;
-  /**
-   * Updated instructions
-   */
-  instructions?: string | null | undefined;
   /**
    * Updated name
    */
@@ -255,10 +253,8 @@ export type PatchRequest = {
   // In reality all additional properties should only have type `any`
   // (there might be some duplication here)
   [additionalProperty: string]:
-    | (string | undefined)
     | (boolean | undefined)
     | (string | undefined)
-    | (string | null | undefined)
     | (string | undefined)
     | string
     | string
@@ -273,19 +269,15 @@ export type PatchRequest = {
  * we expect to come in as network data
  */
 export type External$PatchRequest = {
-  access?: string | undefined;
   active?: boolean | undefined;
   description?: string | undefined;
-  instructions?: string | null | undefined;
   name?: string | undefined;
   origin_id: string;
   version_id: string;
 
   [additionalProperty: string]:
-    | (string | undefined)
     | (boolean | undefined)
     | (string | undefined)
-    | (string | null | undefined)
     | (string | undefined)
     | string
     | string
@@ -303,10 +295,8 @@ const SchemaIn$PatchRequest: z.ZodType<
   unknown
 > = z
   .object({
-    access: z.string().optional(),
     active: z.boolean().optional(),
     description: z.string().optional(),
-    instructions: z.string().nullable().optional(),
     name: z.string().optional(),
     origin_id: z.string(),
     version_id: z.string(),
@@ -314,10 +304,8 @@ const SchemaIn$PatchRequest: z.ZodType<
   .catchall(zodRequiredAny)
   .transform((obj) => {
     return zodTransform(obj, {
-      access: "access",
       active: "active",
       description: "description",
-      instructions: "instructions",
       name: "name",
       origin_id: "originId",
       version_id: "versionId",
@@ -334,10 +322,8 @@ const SchemaOut$PatchRequest: z.ZodType<
   PatchRequest // the object to be transformed
 > = z
   .object({
-    access: z.string().optional(),
     active: z.boolean().optional(),
     description: z.string().optional(),
-    instructions: z.string().nullable().optional(),
     name: z.string().optional(),
     originId: z.string(),
     versionId: z.string(),
@@ -345,10 +331,8 @@ const SchemaOut$PatchRequest: z.ZodType<
   .catchall(zodRequiredAny)
   .transform((obj) => {
     return zodTransform(obj, {
-      access: "access",
       active: "active",
       description: "description",
-      instructions: "instructions",
       name: "name",
       originId: "origin_id",
       versionId: "version_id",
@@ -365,10 +349,6 @@ export const Schemas$PatchRequest = {
  */
 export type CreateRequest = {
   /**
-   * Access level (e.g. PRIVATE, PUBLIC)
-   */
-  access?: string | undefined;
-  /**
    * Whether this version is active
    */
   active?: boolean | undefined;
@@ -377,13 +357,13 @@ export type CreateRequest = {
    */
   description: string;
   /**
-   * Optional instructions for the workflow
-   */
-  instructions?: string | null | undefined;
-  /**
    * Name of the workflow version
    */
   name: string;
+  /**
+   * Tasks for the workflow version
+   */
+  tasks?: WorkflowsVersionsCreateBodyTasksItem[] | undefined;
   /**
    * The workflow origin ID
    */
@@ -393,11 +373,10 @@ export type CreateRequest = {
   // In reality all additional properties should only have type `any`
   // (there might be some duplication here)
   [additionalProperty: string]:
-    | (string | undefined)
     | (boolean | undefined)
     | string
-    | (string | null | undefined)
     | string
+    | (WorkflowsVersionsCreateBodyTasksItem[] | undefined)
     | string
     | any
     | null
@@ -410,19 +389,17 @@ export type CreateRequest = {
  * we expect to come in as network data
  */
 export type External$CreateRequest = {
-  access?: string | undefined;
   active?: boolean | undefined;
   description: string;
-  instructions?: string | null | undefined;
   name: string;
+  tasks?: External$WorkflowsVersionsCreateBodyTasksItem[] | undefined;
   origin_id: string;
 
   [additionalProperty: string]:
-    | (string | undefined)
     | (boolean | undefined)
     | string
-    | (string | null | undefined)
     | string
+    | (External$WorkflowsVersionsCreateBodyTasksItem[] | undefined)
     | string
     | External$CreateRequest
     | null
@@ -438,21 +415,19 @@ const SchemaIn$CreateRequest: z.ZodType<
   unknown
 > = z
   .object({
-    access: z.string().optional(),
     active: z.boolean().optional(),
     description: z.string(),
-    instructions: z.string().nullable().optional(),
     name: z.string(),
+    tasks: z.array(Schemas$WorkflowsVersionsCreateBodyTasksItem.in).optional(),
     origin_id: z.string(),
   })
   .catchall(zodRequiredAny)
   .transform((obj) => {
     return zodTransform(obj, {
-      access: "access",
       active: "active",
       description: "description",
-      instructions: "instructions",
       name: "name",
+      tasks: "tasks",
       origin_id: "originId",
     });
   });
@@ -467,21 +442,19 @@ const SchemaOut$CreateRequest: z.ZodType<
   CreateRequest // the object to be transformed
 > = z
   .object({
-    access: z.string().optional(),
     active: z.boolean().optional(),
     description: z.string(),
-    instructions: z.string().nullable().optional(),
     name: z.string(),
+    tasks: z.array(Schemas$WorkflowsVersionsCreateBodyTasksItem.out).optional(),
     originId: z.string(),
   })
   .catchall(zodRequiredAny)
   .transform((obj) => {
     return zodTransform(obj, {
-      access: "access",
       active: "active",
       description: "description",
-      instructions: "instructions",
       name: "name",
+      tasks: "tasks",
       originId: "origin_id",
     });
   });

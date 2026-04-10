@@ -16,10 +16,30 @@ describe("tests client.tools.structuredOutput.create", () => {
       // Get both raw response for status and parsed response for data
       const [rawResponse, response] = await Promise.all([
         client.tools.structuredOutput
-          .create({ input: "string", schema: {}, validate: true })
+          .create({
+            input: "string",
+            params: {
+              maxTokens: 123,
+              model: "string",
+              stopSequences: ["string"],
+              temperature: 123.45,
+              topK: 123,
+              topP: 123.45,
+            },
+            schema: {},
+            validate: true,
+          })
           .asResponse(),
         client.tools.structuredOutput.create({
           input: "string",
+          params: {
+            maxTokens: 123,
+            model: "string",
+            stopSequences: ["string"],
+            temperature: 123.45,
+            topK: 123,
+            topP: 123.45,
+          },
           schema: {},
           validate: true,
         }),

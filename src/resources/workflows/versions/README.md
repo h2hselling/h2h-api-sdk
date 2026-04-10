@@ -117,7 +117,7 @@ const res = await client.workflows.versions.get({
 ##### Example
 
 ```typescript
-{"access": "string", "active": true, "createdAt": "string", "description": "string", "feedId": "string", "id": "string", "name": "string", "userId": "string"}
+{}
 ```
 
 ### Update a workflow version <a name="patch"></a>
@@ -132,11 +132,9 @@ Update an existing workflow version. Only the provided fields will be updated.
 | ---------------------- | :------: | ----------------------- | ---------- |
 | `originId`             |    ✓     | The workflow origin ID  | `"string"` |
 | `versionId`            |    ✓     | The workflow version ID | `"string"` |
-| `access`               |    ✗     | Updated access level    | `"string"` |
 | `active`               |    ✗     | Updated active status   | `true`     |
 | `additionalProperties` |    ✗     |                         | `{}`       |
 | `description`          |    ✗     | Updated description     | `"string"` |
-| `instructions`         |    ✗     | Updated instructions    | `"string"` |
 | `name`                 |    ✗     | Updated name            | `"string"` |
 
 #### Example Snippet
@@ -174,15 +172,14 @@ Create a new workflow version under a specific workflow origin.
 
 #### Parameters
 
-| Parameter              | Required | Description                            | Example    |
-| ---------------------- | :------: | -------------------------------------- | ---------- |
-| `description`          |    ✓     | Description of the workflow version    | `"string"` |
-| `name`                 |    ✓     | Name of the workflow version           | `"string"` |
-| `originId`             |    ✓     | The workflow origin ID                 | `"string"` |
-| `access`               |    ✗     | Access level (e.g. PRIVATE, PUBLIC)    | `"string"` |
-| `active`               |    ✗     | Whether this version is active         | `true`     |
-| `additionalProperties` |    ✗     |                                        | `{}`       |
-| `instructions`         |    ✗     | Optional instructions for the workflow | `"string"` |
+| Parameter              | Required | Description                         | Example                                                                                               |
+| ---------------------- | :------: | ----------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `description`          |    ✓     | Description of the workflow version | `"string"`                                                                                            |
+| `name`                 |    ✓     | Name of the workflow version        | `"string"`                                                                                            |
+| `originId`             |    ✓     | The workflow origin ID              | `"string"`                                                                                            |
+| `active`               |    ✗     | Whether this version is active      | `true`                                                                                                |
+| `additionalProperties` |    ✗     |                                     | `{}`                                                                                                  |
+| `tasks`                |    ✗     | Tasks for the workflow version      | `[{"id": "string", "name": "string", "parentTasks": {}, "toolId": "string", "workflowId": "string"}]` |
 
 #### Example Snippet
 
@@ -211,3 +208,7 @@ const res = await client.workflows.versions.create({
 ```typescript
 {"access": "string", "active": true, "createdAt": "string", "description": "string", "feedId": "string", "id": "string", "name": "string", "userId": "string"}
 ```
+
+## Submodules
+
+- [tasks](tasks/README.md) - tasks

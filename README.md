@@ -17,10 +17,19 @@ const client = new Client({
 
 ## Module Documentation and Snippets
 
+### [agent](src/resources/agent/README.md)
+
+- [create](src/resources/agent/README.md#create) - Run an agent
+- [list](src/resources/agent/README.md#list) - Get agent chat data
+
 ### [agent.build.workflow](src/resources/agent/build/workflow/README.md)
 
 - [create](src/resources/agent/build/workflow/README.md#create) - Build a workflow
 - [list](src/resources/agent/build/workflow/README.md#list) - Get workflow build output
+
+### [agent.history](src/resources/agent/history/README.md)
+
+- [list](src/resources/agent/history/README.md#list) - List agent chat history
 
 ### [auth.login](src/resources/auth/login/README.md)
 
@@ -32,9 +41,7 @@ const client = new Client({
 
 ### [chats](src/resources/chats/README.md)
 
-- [create](src/resources/chats/README.md#create) - Create a chat
 - [get](src/resources/chats/README.md#get) - Get a chat
-- [patch](src/resources/chats/README.md#patch) - Continue a chat
 
 ### [feeds](src/resources/feeds/README.md)
 
@@ -46,10 +53,6 @@ const client = new Client({
 
 - [create](src/resources/feeds/items/README.md#create) - Create a new feed item for an API feed
 - [get](src/resources/feeds/items/README.md#get) - Get a specific feed item by ID
-
-### [feeds.vector.search](src/resources/feeds/vector/search/README.md)
-
-- [create](src/resources/feeds/vector/search/README.md#create) - Run a query against feed embeddings
 
 ### [integrations.api](src/resources/integrations/api/README.md)
 
@@ -174,5 +177,19 @@ const client = new Client({
 - [get](src/resources/workflows/versions/README.md#get) - Get a workflow version
 - [list](src/resources/workflows/versions/README.md#list) - List workflow versions
 - [patch](src/resources/workflows/versions/README.md#patch) - Update a workflow version
+
+### [workflows.versions.tasks](src/resources/workflows/versions/tasks/README.md)
+
+- [create](src/resources/workflows/versions/tasks/README.md#create) - Create a workflow task
+- [delete](src/resources/workflows/versions/tasks/README.md#delete) - Delete a workflow task
+- [get](src/resources/workflows/versions/tasks/README.md#get) - Get a workflow task
+- [patch](src/resources/workflows/versions/tasks/README.md#patch) - Update a workflow task
+
+### [workspace.variables](src/resources/workspace/variables/README.md)
+
+- [create](src/resources/workspace/variables/README.md#create) - Create a workspace variable
+- [delete](src/resources/workspace/variables/README.md#delete) - Delete a workspace variable
+- [list](src/resources/workspace/variables/README.md#list) - List workspace variables
+- [patch](src/resources/workspace/variables/README.md#patch) - Update a workspace variable
 
 <!-- MODULE DOCS END -->

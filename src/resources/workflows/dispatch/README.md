@@ -10,11 +10,11 @@ Dispatch a new workflow run asynchronously. This call returns the workflow run I
 
 #### Parameters
 
-| Parameter    | Required | Description | Example         |
-| ------------ | :------: | ----------- | --------------- |
-| `workflowId` |    ✓     |             | `"string"`      |
-| `data`       |    ✗     |             | `{"input": {}}` |
-| `└─ input`   |    ✓     |             | `{}`            |
+| Parameter    | Required | Description | Example          |
+| ------------ | :------: | ----------- | ---------------- |
+| `workflowId` |    ✓     |             | `"string"`       |
+| `data`       |    ✗     |             | `{"inputs": {}}` |
+| `└─ inputs`  |    ✓     |             | `{}`             |
 
 #### Example Snippet
 

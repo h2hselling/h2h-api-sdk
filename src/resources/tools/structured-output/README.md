@@ -10,11 +10,18 @@ Transform unstructured input into JSON that matches the provided schema.
 
 #### Parameters
 
-| Parameter  | Required | Description                                      | Example    |
-| ---------- | :------: | ------------------------------------------------ | ---------- |
-| `input`    |    ✓     | the unstructured data to format                  | `"string"` |
-| `schema`   |    ✓     |                                                  | `{}`       |
-| `validate` |    ✗     | Whether to validate the schema against the input | `true`     |
+| Parameter          | Required | Description                                      | Example      |
+| ------------------ | :------: | ------------------------------------------------ | ------------ |
+| `input`            |    ✓     | the unstructured data to format                  | `"string"`   |
+| `schema`           |    ✓     |                                                  | `{}`         |
+| `params`           |    ✗     |                                                  | `{}`         |
+| `└─ maxTokens`     |    ✗     | The maximum number of tokens to generate         | `123`        |
+| `└─ model`         |    ✗     | The name of the model to use for the LLM         | `"string"`   |
+| `└─ stopSequences` |    ✗     | The stop sequences to use for the LLM            | `["string"]` |
+| `└─ temperature`   |    ✗     | The temperature to use for the LLM               | `123.0`      |
+| `└─ topK`          |    ✗     | The top k to use for the LLM                     | `123`        |
+| `└─ topP`          |    ✗     | The top p to use for the LLM                     | `123.0`      |
+| `validate`         |    ✗     | Whether to validate the schema against the input | `true`       |
 
 #### Example Snippet
 

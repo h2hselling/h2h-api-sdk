@@ -16,11 +16,35 @@ import {
  */
 export type CreateRequest = {
   /**
+   * The maximum number of tokens to generate
+   */
+  maxTokens?: number | null | undefined;
+  /**
    * The maximum number of times the tool can be used
    */
   maxUses?: number | null | undefined;
   messages: ToolsInternetSearchCreateBodyMessagesItem[];
+  /**
+   * The name of the model to use for the LLM
+   */
+  model?: string | null | undefined;
+  /**
+   * The stop sequences to use for the LLM
+   */
+  stopSequences?: string[] | null | undefined;
   system: string;
+  /**
+   * The temperature to use for the LLM
+   */
+  temperature?: number | null | undefined;
+  /**
+   * The top k to use for the LLM
+   */
+  topK?: number | null | undefined;
+  /**
+   * The top p to use for the LLM
+   */
+  topP?: number | null | undefined;
 };
 
 /**
@@ -29,9 +53,15 @@ export type CreateRequest = {
  * we expect to come in as network data
  */
 export type External$CreateRequest = {
+  max_tokens?: number | null | undefined;
   max_uses?: number | null | undefined;
   messages: External$ToolsInternetSearchCreateBodyMessagesItem[];
+  model?: string | null | undefined;
+  stop_sequences?: string[] | null | undefined;
   system: string;
+  temperature?: number | null | undefined;
+  top_k?: number | null | undefined;
+  top_p?: number | null | undefined;
 };
 
 /**
@@ -43,15 +73,27 @@ const SchemaIn$CreateRequest: z.ZodType<
   unknown
 > = z
   .object({
+    max_tokens: z.number().int().nullable().optional(),
     max_uses: z.number().int().nullable().optional(),
     messages: z.array(Schemas$ToolsInternetSearchCreateBodyMessagesItem.in),
+    model: z.string().nullable().optional(),
+    stop_sequences: z.array(z.string()).nullable().optional(),
     system: z.string(),
+    temperature: z.number().nullable().optional(),
+    top_k: z.number().int().nullable().optional(),
+    top_p: z.number().nullable().optional(),
   })
   .transform((obj) => {
     return zodTransform(obj, {
+      max_tokens: "maxTokens",
       max_uses: "maxUses",
       messages: "messages",
+      model: "model",
+      stop_sequences: "stopSequences",
       system: "system",
+      temperature: "temperature",
+      top_k: "topK",
+      top_p: "topP",
     });
   });
 
@@ -65,15 +107,27 @@ const SchemaOut$CreateRequest: z.ZodType<
   CreateRequest // the object to be transformed
 > = z
   .object({
+    maxTokens: z.number().int().nullable().optional(),
     maxUses: z.number().int().nullable().optional(),
     messages: z.array(Schemas$ToolsInternetSearchCreateBodyMessagesItem.out),
+    model: z.string().nullable().optional(),
+    stopSequences: z.array(z.string()).nullable().optional(),
     system: z.string(),
+    temperature: z.number().nullable().optional(),
+    topK: z.number().int().nullable().optional(),
+    topP: z.number().nullable().optional(),
   })
   .transform((obj) => {
     return zodTransform(obj, {
+      maxTokens: "max_tokens",
       maxUses: "max_uses",
       messages: "messages",
+      model: "model",
+      stopSequences: "stop_sequences",
       system: "system",
+      temperature: "temperature",
+      topK: "top_k",
+      topP: "top_p",
     });
   });
 

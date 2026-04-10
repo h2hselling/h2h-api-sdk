@@ -19,6 +19,7 @@ describe("tests client.tools.codeExecution.create", () => {
           .create({
             code: "string",
             context: {},
+            environment: {},
             inputs: {},
             language: "javascript",
             libraries: ["string"],
@@ -29,6 +30,7 @@ describe("tests client.tools.codeExecution.create", () => {
         client.tools.codeExecution.create({
           code: "string",
           context: {},
+          environment: {},
           inputs: {},
           language: "javascript",
           libraries: ["string"],

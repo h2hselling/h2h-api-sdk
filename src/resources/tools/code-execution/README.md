@@ -10,16 +10,17 @@ Execute code in a supported language and return logs, structured outputs, and th
 
 #### Parameters
 
-| Parameter              | Required | Description                                                           | Example        |
-| ---------------------- | :------: | --------------------------------------------------------------------- | -------------- |
-| `code`                 |    ✓     | The source code snippet to be executed.                               | `"string"`     |
-| `inputs`               |    ✓     | An object of key-value pairs to be passed as inputs to the code.      | `{}`           |
-| `language`             |    ✓     | The programming language of the code.                                 | `"javascript"` |
-| `additionalProperties` |    ✗     |                                                                       | `{}`           |
-| `context`              |    ✗     | An object of key-value pairs to be passed as context to the code.     | `{}`           |
-| `libraries`            |    ✗     | An optional list of external libraries or packages used by the code.  | `["string"]`   |
-| `outputId`             |    ✗     | The ID of the Workflow Task Output associated with the code execution | `"string"`     |
-| `taskId`               |    ✗     | The ID of the Workflow Task associated with the code execution        | `"string"`     |
+| Parameter              | Required | Description                                                                     | Example        |
+| ---------------------- | :------: | ------------------------------------------------------------------------------- | -------------- |
+| `code`                 |    ✓     | The source code snippet to be executed.                                         | `"string"`     |
+| `inputs`               |    ✓     | An object of key-value pairs to be passed as inputs to the code.                | `{}`           |
+| `language`             |    ✓     | The programming language of the code.                                           | `"javascript"` |
+| `additionalProperties` |    ✗     |                                                                                 | `{}`           |
+| `context`              |    ✗     | An object of key-value pairs to be passed as context to the code.               | `{}`           |
+| `environment`          |    ✗     | An object of key-value pairs to be passed as environment variables to the code. | `{}`           |
+| `libraries`            |    ✗     | An optional list of external libraries or packages used by the code.            | `["string"]`   |
+| `outputId`             |    ✗     | The ID of the Workflow Task Output associated with the code execution           | `"string"`     |
+| `taskId`               |    ✗     | The ID of the Workflow Task associated with the code execution                  | `"string"`     |
 
 #### Example Snippet
 

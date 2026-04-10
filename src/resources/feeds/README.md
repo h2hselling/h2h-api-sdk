@@ -78,15 +78,13 @@ Create a new feed and configure its source details based on the selected feed ty
 
 #### Parameters
 
-| Parameter        | Required | Description | Example                                                          |
-| ---------------- | :------: | ----------- | ---------------------------------------------------------------- |
-| `data`           |    ✗     |             | `{"description": "string", "feedType": "API", "name": "string"}` |
-| `└─ accountId`   |    ✗     |             | `"string"`                                                       |
-| `└─ config`      |    ✗     |             | `{"handle": "string", "trustedSenders": ["string"]}`             |
-| `└─ description` |    ✓     |             | `"string"`                                                       |
-| `└─ feedType`    |    ✓     |             | `"API"`                                                          |
-| `└─ name`        |    ✓     |             | `"string"`                                                       |
-| `└─ userId`      |    ✗     |             | `"string"`                                                       |
+| Parameter        | Required | Description | Example                                                                                                                        |
+| ---------------- | :------: | ----------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `data`           |    ✗     |             | `{"config": {"handle": "string", "trustedSenders": ["string"]}, "description": "string", "feedType": "API", "name": "string"}` |
+| `└─ config`      |    ✓     |             | `{"handle": "string", "trustedSenders": ["string"]}`                                                                           |
+| `└─ description` |    ✓     |             | `"string"`                                                                                                                     |
+| `└─ feedType`    |    ✓     |             | `"API"`                                                                                                                        |
+| `└─ name`        |    ✓     |             | `"string"`                                                                                                                     |
 
 #### Example Snippet
 
@@ -115,4 +113,3 @@ const res = await client.feeds.create();
 ## Submodules
 
 - [items](items/README.md) - items
-- [vector](vector/README.md) - vector

@@ -5,6 +5,12 @@
 import { zodRequiredAny, zodTransform } from "make-api-request-js";
 import * as z from "zod";
 
+import {
+  External$ToolsStructuredOutputCreateBodyParams,
+  Schemas$ToolsStructuredOutputCreateBodyParams,
+  ToolsStructuredOutputCreateBodyParams,
+} from "api_ts/types/tools-structured-output-create-body-params";
+
 /**
  * CreateRequest
  */
@@ -13,6 +19,7 @@ export type CreateRequest = {
    * the unstructured data to format
    */
   input: string;
+  params?: ToolsStructuredOutputCreateBodyParams | undefined;
   schema: Record<string, any | undefined> | any[];
   /**
    * Whether to validate the schema against the input
@@ -27,6 +34,7 @@ export type CreateRequest = {
  */
 export type External$CreateRequest = {
   input: string;
+  params?: External$ToolsStructuredOutputCreateBodyParams | undefined;
   schema: Record<string, any | undefined> | any[];
   validate?: boolean | undefined;
 };
@@ -41,6 +49,7 @@ const SchemaIn$CreateRequest: z.ZodType<
 > = z
   .object({
     input: z.string(),
+    params: Schemas$ToolsStructuredOutputCreateBodyParams.in.optional(),
     schema: z.union([
       z.record(z.string(), zodRequiredAny.optional()),
       z.array(zodRequiredAny),
@@ -50,6 +59,7 @@ const SchemaIn$CreateRequest: z.ZodType<
   .transform((obj) => {
     return zodTransform(obj, {
       input: "input",
+      params: "params",
       schema: "schema",
       validate: "validate",
     });
@@ -66,6 +76,7 @@ const SchemaOut$CreateRequest: z.ZodType<
 > = z
   .object({
     input: z.string(),
+    params: Schemas$ToolsStructuredOutputCreateBodyParams.out.optional(),
     schema: z.union([
       z.record(z.string(), zodRequiredAny.optional()),
       z.array(zodRequiredAny),
@@ -75,6 +86,7 @@ const SchemaOut$CreateRequest: z.ZodType<
   .transform((obj) => {
     return zodTransform(obj, {
       input: "input",
+      params: "params",
       schema: "schema",
       validate: "validate",
     });

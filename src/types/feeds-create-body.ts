@@ -20,18 +20,13 @@ import {
  * FeedsCreateBody
  */
 export type FeedsCreateBody = {
-  accountId?: string | null | undefined;
-  config?:
-    | (
-        | FeedsCreateBodyConfigObj0
-        | Record<string, any | undefined>
-        | FeedsCreateBodyConfigObj2
-      )
-    | undefined;
+  config:
+    | FeedsCreateBodyConfigObj0
+    | Record<string, any | undefined>
+    | FeedsCreateBodyConfigObj2;
   description: string;
   feedType: "API" | "CHRONJOB" | "EMAIL";
   name: string;
-  userId?: string | null | undefined;
 };
 
 /**
@@ -40,18 +35,13 @@ export type FeedsCreateBody = {
  * we expect to come in as network data
  */
 export type External$FeedsCreateBody = {
-  account_id?: string | null | undefined;
-  config?:
-    | (
-        | External$FeedsCreateBodyConfigObj0
-        | Record<string, any | undefined>
-        | External$FeedsCreateBodyConfigObj2
-      )
-    | undefined;
+  config:
+    | External$FeedsCreateBodyConfigObj0
+    | Record<string, any | undefined>
+    | External$FeedsCreateBodyConfigObj2;
   description: string;
   feed_type: "API" | "CHRONJOB" | "EMAIL";
   name: string;
-  user_id?: string | null | undefined;
 };
 
 /**
@@ -63,27 +53,21 @@ const SchemaIn$FeedsCreateBody: z.ZodType<
   unknown
 > = z
   .object({
-    account_id: z.string().nullable().optional(),
-    config: z
-      .union([
-        Schemas$FeedsCreateBodyConfigObj0.in,
-        z.record(z.string(), zodRequiredAny.optional()),
-        Schemas$FeedsCreateBodyConfigObj2.in,
-      ])
-      .optional(),
+    config: z.union([
+      Schemas$FeedsCreateBodyConfigObj0.in,
+      z.record(z.string(), zodRequiredAny.optional()),
+      Schemas$FeedsCreateBodyConfigObj2.in,
+    ]),
     description: z.string(),
     feed_type: z.enum(["API", "CHRONJOB", "EMAIL"]),
     name: z.string(),
-    user_id: z.string().nullable().optional(),
   })
   .transform((obj) => {
     return zodTransform(obj, {
-      account_id: "accountId",
       config: "config",
       description: "description",
       feed_type: "feedType",
       name: "name",
-      user_id: "userId",
     });
   });
 
@@ -97,27 +81,21 @@ const SchemaOut$FeedsCreateBody: z.ZodType<
   FeedsCreateBody // the object to be transformed
 > = z
   .object({
-    accountId: z.string().nullable().optional(),
-    config: z
-      .union([
-        Schemas$FeedsCreateBodyConfigObj0.out,
-        z.record(z.string(), zodRequiredAny.optional()),
-        Schemas$FeedsCreateBodyConfigObj2.out,
-      ])
-      .optional(),
+    config: z.union([
+      Schemas$FeedsCreateBodyConfigObj0.out,
+      z.record(z.string(), zodRequiredAny.optional()),
+      Schemas$FeedsCreateBodyConfigObj2.out,
+    ]),
     description: z.string(),
     feedType: z.enum(["API", "CHRONJOB", "EMAIL"]),
     name: z.string(),
-    userId: z.string().nullable().optional(),
   })
   .transform((obj) => {
     return zodTransform(obj, {
-      accountId: "account_id",
       config: "config",
       description: "description",
       feedType: "feed_type",
       name: "name",
-      userId: "user_id",
     });
   });
 

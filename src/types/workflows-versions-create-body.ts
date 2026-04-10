@@ -5,14 +5,16 @@
 import { zodRequiredAny, zodTransform } from "make-api-request-js";
 import * as z from "zod";
 
+import {
+  External$WorkflowsVersionsCreateBodyTasksItem,
+  Schemas$WorkflowsVersionsCreateBodyTasksItem,
+  WorkflowsVersionsCreateBodyTasksItem,
+} from "./workflows-versions-create-body-tasks-item";
+
 /**
  * WorkflowsVersionsCreateBody
  */
 export type WorkflowsVersionsCreateBody = {
-  /**
-   * Access level (e.g. PRIVATE, PUBLIC)
-   */
-  access?: string | undefined;
   /**
    * Whether this version is active
    */
@@ -22,23 +24,22 @@ export type WorkflowsVersionsCreateBody = {
    */
   description: string;
   /**
-   * Optional instructions for the workflow
-   */
-  instructions?: string | null | undefined;
-  /**
    * Name of the workflow version
    */
   name: string;
+  /**
+   * Tasks for the workflow version
+   */
+  tasks?: WorkflowsVersionsCreateBodyTasksItem[] | undefined;
 
   // Index types must also accommodate all defined properties if present (typescript limitation)
   // In reality all additional properties should only have type `any`
   // (there might be some duplication here)
   [additionalProperty: string]:
-    | (string | undefined)
     | (boolean | undefined)
     | string
-    | (string | null | undefined)
     | string
+    | (WorkflowsVersionsCreateBodyTasksItem[] | undefined)
     | any
     | null
     | undefined;
@@ -50,18 +51,16 @@ export type WorkflowsVersionsCreateBody = {
  * we expect to come in as network data
  */
 export type External$WorkflowsVersionsCreateBody = {
-  access?: string | undefined;
   active?: boolean | undefined;
   description: string;
-  instructions?: string | null | undefined;
   name: string;
+  tasks?: External$WorkflowsVersionsCreateBodyTasksItem[] | undefined;
 
   [additionalProperty: string]:
-    | (string | undefined)
     | (boolean | undefined)
     | string
-    | (string | null | undefined)
     | string
+    | (External$WorkflowsVersionsCreateBodyTasksItem[] | undefined)
     | External$WorkflowsVersionsCreateBody
     | null
     | undefined;
@@ -76,20 +75,18 @@ const SchemaIn$WorkflowsVersionsCreateBody: z.ZodType<
   unknown
 > = z
   .object({
-    access: z.string().optional(),
     active: z.boolean().optional(),
     description: z.string(),
-    instructions: z.string().nullable().optional(),
     name: z.string(),
+    tasks: z.array(Schemas$WorkflowsVersionsCreateBodyTasksItem.in).optional(),
   })
   .catchall(zodRequiredAny)
   .transform((obj) => {
     return zodTransform(obj, {
-      access: "access",
       active: "active",
       description: "description",
-      instructions: "instructions",
       name: "name",
+      tasks: "tasks",
     });
   });
 
@@ -103,20 +100,18 @@ const SchemaOut$WorkflowsVersionsCreateBody: z.ZodType<
   WorkflowsVersionsCreateBody // the object to be transformed
 > = z
   .object({
-    access: z.string().optional(),
     active: z.boolean().optional(),
     description: z.string(),
-    instructions: z.string().nullable().optional(),
     name: z.string(),
+    tasks: z.array(Schemas$WorkflowsVersionsCreateBodyTasksItem.out).optional(),
   })
   .catchall(zodRequiredAny)
   .transform((obj) => {
     return zodTransform(obj, {
-      access: "access",
       active: "active",
       description: "description",
-      instructions: "instructions",
       name: "name",
+      tasks: "tasks",
     });
   });
 

@@ -130,18 +130,12 @@ describe("tests client.workflows.create", () => {
       // Get both raw response for status and parsed response for data
       const [rawResponse, response] = await Promise.all([
         client.workflows
-          .create({
-            description: "string",
-            name: "string",
-            originId: "string",
-            workflowId: "string",
-          })
+          .create({ active: true, description: "string", name: "string" })
           .asResponse(),
         client.workflows.create({
+          active: true,
           description: "string",
           name: "string",
-          originId: "string",
-          workflowId: "string",
         }),
       ]);
       expect(rawResponse.status).toBe(200); // Exact status code match
