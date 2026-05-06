@@ -9,7 +9,22 @@ import * as z from "zod";
  * WorkflowsInvokeCreateBody
  */
 export type WorkflowsInvokeCreateBody = {
+  /**
+   * The input for the workflow run
+   */
   input: Record<string, any | undefined>;
+  /**
+   * The inputs for the workflow run (deprecated, use input instead)
+   */
+  inputs?: Record<string, any | undefined> | undefined;
+  /**
+   * Optional: The ID of the workflow run to invoke. Used for re-invoking a workflow run.
+   */
+  runId?: string | undefined;
+  /**
+   * Optional: The ID of the task to invoke. Used for re-invoking a workflow run from a specific task.
+   */
+  taskId?: string | undefined;
 };
 
 /**
@@ -19,6 +34,9 @@ export type WorkflowsInvokeCreateBody = {
  */
 export type External$WorkflowsInvokeCreateBody = {
   input: Record<string, any | undefined>;
+  inputs?: Record<string, any | undefined> | undefined;
+  run_id?: string | undefined;
+  task_id?: string | undefined;
 };
 
 /**
@@ -31,10 +49,16 @@ const SchemaIn$WorkflowsInvokeCreateBody: z.ZodType<
 > = z
   .object({
     input: z.record(z.string(), zodRequiredAny.optional()),
+    inputs: z.record(z.string(), zodRequiredAny.optional()).optional(),
+    run_id: z.string().optional(),
+    task_id: z.string().optional(),
   })
   .transform((obj) => {
     return zodTransform(obj, {
       input: "input",
+      inputs: "inputs",
+      run_id: "runId",
+      task_id: "taskId",
     });
   });
 
@@ -49,10 +73,16 @@ const SchemaOut$WorkflowsInvokeCreateBody: z.ZodType<
 > = z
   .object({
     input: z.record(z.string(), zodRequiredAny.optional()),
+    inputs: z.record(z.string(), zodRequiredAny.optional()).optional(),
+    runId: z.string().optional(),
+    taskId: z.string().optional(),
   })
   .transform((obj) => {
     return zodTransform(obj, {
       input: "input",
+      inputs: "inputs",
+      runId: "run_id",
+      taskId: "task_id",
     });
   });
 

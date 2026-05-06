@@ -9,6 +9,9 @@ import * as z from "zod";
  * WorkflowsDispatchCreateResponse
  */
 export type WorkflowsDispatchCreateResponse = {
+  /**
+   * The workflow run ID
+   */
   id: string;
 };
 

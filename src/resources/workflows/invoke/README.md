@@ -10,11 +10,14 @@ Invoke a workflow run. This is a synchronous call that waits for the workflow ru
 
 #### Parameters
 
-| Parameter    | Required | Description | Example         |
-| ------------ | :------: | ----------- | --------------- |
-| `workflowId` |    ✓     |             | `"string"`      |
-| `data`       |    ✗     |             | `{"input": {}}` |
-| `└─ input`   |    ✓     |             | `{}`            |
+| Parameter    | Required | Description                                                                                       | Example         |
+| ------------ | :------: | ------------------------------------------------------------------------------------------------- | --------------- |
+| `workflowId` |    ✓     |                                                                                                   | `"string"`      |
+| `data`       |    ✗     |                                                                                                   | `{"input": {}}` |
+| `└─ input`   |    ✓     | The input for the workflow run                                                                    | `{}`            |
+| `└─ inputs`  |    ✗     | The inputs for the workflow run (deprecated, use input instead)                                   | `{}`            |
+| `└─ runId`   |    ✗     | Optional: The ID of the workflow run to invoke. Used for re-invoking a workflow run.              | `"string"`      |
+| `└─ taskId`  |    ✗     | Optional: The ID of the task to invoke. Used for re-invoking a workflow run from a specific task. | `"string"`      |
 
 #### Example Snippet
 

@@ -16,10 +16,13 @@ describe("tests client.workflows.invoke.create", () => {
       // Get both raw response for status and parsed response for data
       const [rawResponse, response] = await Promise.all([
         client.workflows.invoke
-          .create({ data: { input: {} }, workflowId: "string" })
+          .create({
+            data: { input: {}, inputs: {}, runId: "string", taskId: "string" },
+            workflowId: "string",
+          })
           .asResponse(),
         client.workflows.invoke.create({
-          data: { input: {} },
+          data: { input: {}, inputs: {}, runId: "string", taskId: "string" },
           workflowId: "string",
         }),
       ]);

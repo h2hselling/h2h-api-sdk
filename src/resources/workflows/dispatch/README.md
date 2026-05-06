@@ -10,11 +10,14 @@ Dispatch a new workflow run asynchronously. This call returns the workflow run I
 
 #### Parameters
 
-| Parameter    | Required | Description | Example          |
-| ------------ | :------: | ----------- | ---------------- |
-| `workflowId` |    ✓     |             | `"string"`       |
-| `data`       |    ✗     |             | `{"inputs": {}}` |
-| `└─ inputs`  |    ✓     |             | `{}`             |
+| Parameter    | Required | Description                                                                                       | Example         |
+| ------------ | :------: | ------------------------------------------------------------------------------------------------- | --------------- |
+| `workflowId` |    ✓     |                                                                                                   | `"string"`      |
+| `data`       |    ✗     |                                                                                                   | `{"input": {}}` |
+| `└─ input`   |    ✓     | The input for the workflow run                                                                    | `{}`            |
+| `└─ inputs`  |    ✗     | The inputs for the workflow run (deprecated, use input instead)                                   | `{}`            |
+| `└─ runId`   |    ✗     | Optional: The ID of the workflow run to invoke. Used for re-invoking a workflow run.              | `"string"`      |
+| `└─ taskId`  |    ✗     | Optional: The ID of the task to invoke. Used for re-invoking a workflow run from a specific task. | `"string"`      |
 
 #### Example Snippet
 

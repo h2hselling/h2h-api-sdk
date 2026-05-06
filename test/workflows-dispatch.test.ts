@@ -16,10 +16,13 @@ describe("tests client.workflows.dispatch.create", () => {
       // Get both raw response for status and parsed response for data
       const [rawResponse, response] = await Promise.all([
         client.workflows.dispatch
-          .create({ data: { inputs: {} }, workflowId: "string" })
+          .create({
+            data: { input: {}, inputs: {}, runId: "string", taskId: "string" },
+            workflowId: "string",
+          })
           .asResponse(),
         client.workflows.dispatch.create({
-          data: { inputs: {} },
+          data: { input: {}, inputs: {}, runId: "string", taskId: "string" },
           workflowId: "string",
         }),
       ]);
