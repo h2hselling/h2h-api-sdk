@@ -5,7 +5,7 @@
 export enum Environment {
   Default = "http://localhost",
   DefaultTemplate = "{protocol}://{host}",
-  MockServer = "https://api.sideko.dev/v1/mock/human2human/api/0.5.0",
+  MockServer = "https://api.sideko.dev/v1/mock/human2human/api/0.5.1",
 }
 
 /**

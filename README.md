@@ -22,6 +22,10 @@ const client = new Client({
 - [create](src/resources/agent/README.md#create) - Run an agent
 - [list](src/resources/agent/README.md#list) - Get agent chat data
 
+### [agent.abort](src/resources/agent/abort/README.md)
+
+- [create](src/resources/agent/abort/README.md#create) - Abort an in-progress agent chat
+
 ### [agent.build.workflow](src/resources/agent/build/workflow/README.md)
 
 - [create](src/resources/agent/build/workflow/README.md#create) - Build a workflow
@@ -42,6 +46,23 @@ const client = new Client({
 ### [chats](src/resources/chats/README.md)
 
 - [get](src/resources/chats/README.md#get) - Get a chat
+
+### [datastore](src/resources/datastore/README.md)
+
+- [create](src/resources/datastore/README.md#create) - Create a datastore
+- [get](src/resources/datastore/README.md#get) - Get a datastore
+- [list](src/resources/datastore/README.md#list) - List datastores
+
+### [datastore.items](src/resources/datastore/items/README.md)
+
+- [create](src/resources/datastore/items/README.md#create) - Create a datastore item
+- [delete](src/resources/datastore/items/README.md#delete) - Delete a datastore item
+- [get](src/resources/datastore/items/README.md#get) - Get a datastore item
+- [list](src/resources/datastore/items/README.md#list) - List datastore items
+
+### [datastore.query](src/resources/datastore/query/README.md)
+
+- [create](src/resources/datastore/query/README.md#create) - Query a datastore
 
 ### [feeds](src/resources/feeds/README.md)
 

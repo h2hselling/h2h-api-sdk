@@ -2,6 +2,7 @@
 
 ## Submodules
 
+- [abort](resources/agent/abort/README.md) - abort
 - [workflow](resources/agent/build/workflow/README.md) - workflow
 - [build](resources/agent/build/README.md) - build
 - [history](resources/agent/history/README.md) - history
@@ -10,6 +11,9 @@
 - [refresh](resources/auth/refresh/README.md) - refresh
 - [auth](resources/auth/README.md) - auth
 - [chats](resources/chats/README.md) - chats
+- [items](resources/datastore/items/README.md) - items
+- [query](resources/datastore/query/README.md) - query
+- [datastore](resources/datastore/README.md) - datastore
 - [items](resources/feeds/items/README.md) - items
 - [feeds](resources/feeds/README.md) - feeds
 - [operations](resources/integrations/api/operations/README.md) - operations

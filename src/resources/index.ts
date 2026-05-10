@@ -1,6 +1,7 @@
 export * as agent from "./agent";
 export * as auth from "./auth";
 export * as chats from "./chats";
+export * as datastore from "./datastore";
 export * as feeds from "./feeds";
 export * as integrations from "./integrations";
 export * as memory from "./memory";

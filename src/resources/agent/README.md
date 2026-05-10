@@ -81,5 +81,6 @@ const res = await client.agent.create({ agent: "string", message: "string" });
 
 ## Submodules
 
+- [abort](abort/README.md) - abort
 - [build](build/README.md) - build
 - [history](history/README.md) - history

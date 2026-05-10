@@ -1,5 +1,5 @@
 {
-  "id": "751dbd37-9cea-426f-93c7-2d3ca607c44d",
+  "id": "fe9425d2-80a6-4b26-b3f0-de2428df0c6b",
   "tracked_paths": [
     {
       "editable": false,
@@ -68,6 +68,22 @@
     {
       "editable": true,
       "path": "src/resources/agent/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/abort/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/abort/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/agent/abort/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/agent/abort/resource-client.ts"
     },
     {
       "editable": true,
@@ -192,6 +208,54 @@
     {
       "editable": true,
       "path": "src/resources/chats/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/datastore/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/datastore/index.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/datastore/items/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/datastore/items/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/datastore/items/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/datastore/items/resource-client.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/datastore/query/README.md"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/datastore/query/index.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/datastore/query/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/datastore/query/resource-client.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/resources/datastore/request-types.ts"
+    },
+    {
+      "editable": true,
+      "path": "src/resources/datastore/resource-client.ts"
     },
     {
       "editable": true,
@@ -711,6 +775,14 @@
     },
     {
       "editable": false,
+      "path": "src/types/agent-abort-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/agent-abort-create-response.ts"
+    },
+    {
+      "editable": false,
       "path": "src/types/agent-build-workflow-create-body.ts"
     },
     {
@@ -916,6 +988,94 @@
     {
       "editable": false,
       "path": "src/types/chats-get-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-create-body-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-create-response-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-get-response-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-get-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-items-create-body-encoding-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-items-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-items-create-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-items-delete-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-items-get-response-encoding-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-items-get-response.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-items-list-response-item-obj0-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-items-list-response-item-obj0.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-items-list-response-item-obj1-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-items-list-response-item-obj1.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-list-response-item-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-list-response-item.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-list-type-enum.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-query-create-body-filters.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-query-create-body.ts"
+    },
+    {
+      "editable": false,
+      "path": "src/types/datastore-query-create-response.ts"
     },
     {
       "editable": false,
@@ -1595,6 +1755,10 @@
     },
     {
       "editable": false,
+      "path": "test/agent-abort.test.ts"
+    },
+    {
+      "editable": false,
       "path": "test/agent-build-workflow.test.ts"
     },
     {
@@ -1616,6 +1780,18 @@
     {
       "editable": false,
       "path": "test/chats.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/datastore-items.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/datastore-query.test.ts"
+    },
+    {
+      "editable": false,
+      "path": "test/datastore.test.ts"
     },
     {
       "editable": false,
